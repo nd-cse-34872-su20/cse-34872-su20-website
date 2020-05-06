@@ -1,0 +1,464 @@
+title:      Programming Challenges
+icon:       fa-gavel
+navigation:
+    - name: "Logistics"
+      link: "#logistics"
+      icon: "fa-cogs"
+    - name: "Schedule"
+      link: "#schedule"
+      icon: "fa-calendar"
+    - name: "Requirements"
+      link: "#Requirements"
+      icon: "fa-balance-scale"
+    - name: "Resources"
+      link: "#resources"
+      icon: "fa-external-link"
+internal:
+external:
+    schedule:   'static/yaml/schedule.yaml'
+body:       |
+
+    <div class="row" markdown="1">
+
+    **CSE 34872** is an elective course in the [Computer Science and
+    Engineering] program at the [University of Notre Dame].  This course
+    encourages the development of practical programming and problem solving
+    skills through extensive practice and guided learning. The bulk of the
+    class revolves around solving *brain-teaser* and *puzzle-type* problems
+    that often appear in programming contests, online challenges, and job
+    interviews.  Additionally, basic software engineering practices such as
+    planning, debugging, testing, and source code management may be discussed.
+
+    [Computer Science and Engineering]:     http://cse.nd.edu
+    [University of Notre Dame]:             http://www.nd.edu
+
+    </div>
+
+    <img src="static/img/icpclogo.png" class="pull-right" style="margin-left: 10px;"/>
+
+    <div class="row" markdown="1">
+
+    Upon successful completion of this course, students will be able to:
+
+    1. **Parse** a variety of inputs and model problems.
+
+    2. **Utilize** appropriate data structures to represent and solve problems.
+
+    3. **Implement** common problem solving techniques and algorithms.
+
+    4. **Employ** modern software development methods and tools.
+
+    5. **Debug** and **test** code within an automated testing environment.
+
+    </div>
+
+    <div class="row">
+        <div class="page-header">
+            <h2 id="logistics"><i class="fa fa-cogs"></i> Logistics</h2>
+        </div>
+    </div>
+
+    <div class="row">
+    <div class="col-md-6">
+        <h3>Class Information</h3>
+        <dl>
+            <dt><i class="fa fa-clock-o"></i> Lecture</dt>
+            <dd><strong>M/W</strong> 7:30 PM - 9:00 PM EST</dd>
+
+            <dt><i class="fa fa-envelope"></i> Mailing List</dt>
+            <dd><a href="mailto:su20-cse-34872-01-group@nd.edu">su20-cse-34872-01-group@nd.edu</a></dd>
+
+            <dt><i class="fa fa-video-camera"></i> Zoom Meeting</dt>
+            <dd><a href="https://notredame.zoom.us/j/91855026147"></a>918-5502-6147</dd>
+
+            <dt><i class="fa fa-slack"></i> Slack Channel</dt>
+            <dd><a href="https://nd-cse.slack.com/messages/cse-34872-su20/">#cse-34872-su20</a></dd>
+
+            <dt><i class="fa fa-gitlab"></i> GitLab Group</dt>
+            <dd><a href="https://www.gitlab.com/nd-cse-34872-su20/">nd-cse-34872-su20</a></dd>
+        </dl>
+    </div>
+
+    <div class="col-md-6">
+        <h3>Instructor</h3>
+
+        <dl>
+            <dt><i class="fa fa-user"></i> Instructor</dt>
+            <dd><a href="http://www3.nd.edu/~pbui/">Peter Bui</a> (<a href="mailto:pbui@nd.edu">pbui@nd.edu</a>)</dd>
+
+            <dt><i class="fa fa-life-ring"></i> Virtual Office Hours</dt>
+            <dd><strong>T/TH</strong> 7:30 - 9:00 PM EST, and by <strong>appointment</strong></dd>
+        </dl>
+
+        <div class="alert alert-info">
+              <h4><i class="fa fa-question"></i> Help Protocol</h4>
+              <ol class="list-inline">
+                  <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
+                  <li><small><i class="fa fa-arrow-right"></i></small></li>
+                  <li><strong><i class="fa fa-slack"></i> Slack</strong></li>
+                  <li><small><i class="fa fa-arrow-right"></i></small></li>
+                  <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
+                  <li><small><i class="fa fa-arrow-right"></i></small></li>
+                  <li><strong><i class="fa fa-envelope"></i> Email</strong></li>
+                  <li><small><i class="fa fa-arrow-right"></i></small></li>
+                  <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
+              </ol>
+        </div>
+    </div>
+    </div>
+
+    <div class="row">
+        <div class="page-header">
+            <h2 id="schedule"><i class="fa fa-calendar"></i> Schedule</h2>
+        </div>
+    </div>
+
+    <style>
+    table.schedule td.unit {
+        background-color: #fff;
+        border-right: 2px solid #ddd;
+        text-align: right;
+        width: 175px;
+        vertical-align: middle;
+    }
+    </style>
+
+    <div class="row">
+        <table class="table condensed table-striped schedule">
+            <thead>
+                <tr>
+                    <th class="text-center">Unit</th>
+                    <th class="text-center" style="width: 100px;">Date</th>
+                    <th class="text-center">Topics</th>
+                    <th class="text-center" style="width: 275px;">Assignments</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for theme in page.external['schedule'] %}
+                {% if 'break' in theme['name'].lower() %}
+                  <tr>
+                  <td colspan="4" class="text-center text-strong" style="border-top: 2px solid #ddd; border-bottom: 2px solid #ddd; padding: 4px;">{{ theme['name'] }}</td>
+                  </tr>
+                  {% continue %}
+                {% end %}
+
+                {% for index, day in enumerate(theme['days']) %}
+                <tr>
+                {% if index == 0 %}
+                    <td rowspan="{{ len(theme['days']) }}" class="text-strong text-primary text-center unit">{{ theme['name'] }}</td>
+                {% end %}
+                    <td class="text-center text-strong"><tt>{{ day['date'] }}</tt></td>
+                    <td class="text-strong">
+                    {% if 'topics' in day %}
+                      {% if day['topics'] == 'Preparation' %}
+                      <i class="text-muted">{{ day.get('topics', '') }}</i>
+                      {% else %}
+                      {{ day.get('topics', '') }}
+                      {% end %}
+                    {% else %}
+                      <i class="text-muted">Programming Challenges</i>
+                    {% end %}
+                    {% for item in day.get('items', []) %}
+                    {% if item['name'].lower().startswith('contest') %}
+                      {% set item['label'] = 'danger' %}
+                    {% elif item['name'].lower().startswith('video') %}
+                      {% set item['label'] = 'success' %}
+                    {% else %}
+                      {% set item['label'] = 'default' %}
+                    {% end %}
+                    {% if 'link' in item %}
+                      <a class="label label-{{ item['label'] }}" href="{{ item['link'] }}">{{ item['name'] }}</a>
+                    {% else %}
+                      <span class="label label-{{ item['label'] }}">{{ item['name'] }}</span>
+                    {% end %}
+                    {% end %}
+                    </td>
+                    <td class="text-strong text-center">
+                    {% for assignment in day.get('assignments', []) %}
+                      {% set assignment_id = ''.join(assignment.lower().split()) %}
+                      {% if assignment_id.startswith('reading') %}
+                        {% set assignment_label = 'primary' %}
+                      {% else %}
+                        {% set assignment_label = 'caution' %}
+                      {% end %}
+                      <a href="{{ assignment_id }}.html" class="label label-{{ assignment_label }}">{{ assignment }}</a>
+                    {% end %}
+                    </td>
+                </tr>
+                {% end %}
+                {% end %}
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row">
+        <div class="page-header">
+            <h2 id="Requirements"><i class="fa fa-balance-scale"></i> Requirements</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+        <h3>Coursework</h3>
+        <table class="table table-condensed table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th class="text-center">Component</th>
+                    <th class="text-center">Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span class="label label-primary">Readings</span> Weekly reading assignments.</td>
+                    <td class="text-center">6 &times; 4</td>
+                </tr>
+                <tr>
+                    <td><span class="label label-caution">Challenges</span> Weekly programming challenges.</td>
+                    <td class="text-center">19 &times; 6</td>
+                </tr>
+                <tr>
+                    <td><span class="label label-default">Style</span> Programming style for each challenge.</td>
+                    <td class="text-center">18 &times; 2</td>
+                </tr>
+                <tr>
+                    <td><span class="label label-info">External</span> External programming contest.</td>
+                    <td class="text-center">2 &times; 30</td>
+                </tr>
+                <tr>
+                    <td><span class="label label-danger">Contests</span> In-class programming contests.</td>
+                    <td class="text-center">36</td>
+                </tr>
+                <tr>
+                    <td><span class="label label-success">Participation</span> Regular class attendation and contribution to course community.</td>
+                    <td class="text-center">30</td>
+                </tr>
+                <tr>
+                    <td class="text-strong text-right">Total</td>
+                    <td class="text-strong text-center">300</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+        <div class="col-md-6">
+        <h3>Grading</h3>
+        <table class="table table-condensed table-bordered">
+            <thead>
+                <tr>
+                    <th class="text-center">Grade</th>
+                    <th class="text-center">Points</th>
+                    <th class="text-center">Grade</th>
+                    <th class="text-center">Points</th>
+                    <th class="text-center">Grade</th>
+                    <th class="text-center">Points</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="success">
+                    <td></td>
+                    <td></td>
+                    <td class="text-center text-strong">A</td>
+                    <td class="text-center">285-300</td>
+                    <td class="text-center text-strong">A-</td>
+                    <td class="text-center">270-284</td>
+                </tr>
+                <tr class="info">
+                    <td class="text-center text-strong">B+</td>
+                    <td class="text-center">260-269</td>
+                    <td class="text-center text-strong">B</td>
+                    <td class="text-center">250-259</td>
+                    <td class="text-center text-strong">B-</td>
+                    <td class="text-center">240-249</td>
+                </tr>
+                <tr class="warning">
+                    <td class="text-center text-strong">C+</td>
+                    <td class="text-center">230-239</td>
+                    <td class="text-center text-strong">C</td>
+                    <td class="text-center">220-229</td>
+                    <td class="text-center text-strong">C-</td>
+                    <td class="text-center">210-219</td>
+                </tr>
+                <tr class="danger">
+                    <td class="text-center text-strong">D</td>
+                    <td class="text-center">195-209</td>
+                    <td class="text-center text-strong">F</td>
+                    <td class="text-center">0-194</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="alert alert-info">
+                <h4><i class="fa fa-calendar"></i> Due Dates</h4>
+                <p>
+                All <b>Readings</b> and <b>Challenges</b> are to be
+                  submitted to your own <b>private</b> <a
+                  href="https://gitlab.com">GitLab</a> repository.  Unless
+                  specified otherwise:
+                </p>
+                <p>
+                <ul>
+                <li><p><b>Readings</b> are due at <b>noon</b> on the <b>Monday</b> of each week.</p></li>
+                <li><p><b>Challenges</b> are due at <b>noon</b> on the <b>Saturday</b> of each week.</p></li>
+                </ul>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+          <h3>Policies</h3>
+          <div class="row">
+              <div class="col-md-4">
+              <h4>Participation</h4>
+              <p>
+              Students are expected to attend and contribute regularly in class. This
+              means answering questions in class, participating in discussions, and
+              helping other students.
+              </p>
+              <p>
+              Foreseeable absences should be discussed with the instructor ahead of time.
+              </p>
+              </div>
+              <div class="col-md-4">
+              <h4>Academic Honesty</h4>
+              <p>
+              Any academic misconduct in this course is considered a serious
+              offense, and the strongest possible academic penalties will be
+              pursued for such behavior. Students may discuss high-level
+              ideas with other students, but at the time of implementation
+              (i.e. programming), each person must do his/her own work. Use
+              of the Internet as a reference is allowed but directly copying
+              code or other information is cheating. It is cheating to copy,
+              to allow another person to copy, all or part of an exam or a
+              assignment, or to fake program output. It is also a violation
+              of the <a href="https://honorcode.nd.edu/">Undergraduate
+              Academic Code of Honor</a> to observe and then fail to report
+              academic dishonesty. You are responsible for the security and
+              integrity of your own work.
+              </p>
+              </div>
+              <div class="col-md-4">
+              <h4>Late Work</h4>
+              <p>
+              In the case of a serious illness or other excused absence, as defined by
+              university policies, coursework submissions will be accepted late by the
+              same number of days as the excused absence.
+              </p>
+              <p>
+              Otherwise, there is a penalty of 25% per day late (except where noted). You
+              may submit some parts of an assignment on time and some parts late. Each
+              submission must clearly state which parts it contains; no part can be
+              submitted more than once.
+              </p>
+              </div>
+              <div class="col-md-4">
+              <h4>Students with Disabilities</h4>
+              <p>
+              Any student who has a documented disability and is registered with
+              Disability Services should speak with the professor as soon as possible
+              regarding accommodations. Students who are not registered should contact
+              the <a href="http://disabilityservices.nd.edu/">Office of Disabilities</a>.
+              </p>
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div class="alert alert-danger">
+            <h4><i class="fa fa-warning"></i> CSE Guide to the Honor Code</h4>
+            <p>For the assignments in this class, you may discuss with other
+            students and consult printed and online resources. You may quote
+            from books and online sources as long as you <b>cite them properly</b>.
+            However, you may <b>not</b> look at another student's solution, and you
+            may not look at solutions.</p>
+            <p>The following table summarizes how you may work with other
+            students and use print/online sources:</p>
+            <p></p>
+                  <table class="table table-striped table-bordered" style="color: #000000; background: #ffffff; font-weight: bold">
+            <thead>
+            <th></th>
+            <th class="text-center">Resources</th>
+            <th class="text-center">Solutions</th>
+            </thead>
+            <tbody>
+            <tr>
+            <th>Consulting</th>
+            <td bgcolor="#93c47d">Allowed</td>
+            <td bgcolor="#e06666">Not Allowed</td>
+            </tr>
+            <tr>
+            <th>Copying</th>
+            <td bgcolor="ffd966">Cite</td>
+            <td bgcolor="#e06666">Not Allowed</td>
+            </tr>
+            </tbody></table>
+            <p>See the <a
+            href="https://cse.nd.edu/undergraduates/honor-code">CSE Guide to
+            the Honor Code</a> for definitions of the above terms.</p>
+            <p>If an instructor sees behavior that is, in his judgement,
+            academically dishonest, he is required to file either an Honor Code
+            Violation Report or a formal report to the College of Engineering
+            Honesty Committee.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="page-header">
+            <h2 id="resources"><i class="fa fa-external-link"></i> Resources</h2>
+        </div>
+    </div>
+    <div class="row" markdown="1">
+    <div class="col-md-6" markdown="1">
+    ### Information
+    - [Competitive Programmer's Handbook](https://cses.fi/book.html)
+        <p>This is our main **textbook** for the semester.  It contains background
+        information regarding the algorithms and data structures we will be
+        utilizing and implementing to solve different problems.</p>
+    - [Competitive Programming Library](https://github.com/AhmadElsagheer/Competitive-programming-library/tree/master/curriculum)
+        <p>This contains a list of topics and links to resources to help students
+        become competitive at programming contests.</p>
+    - [Hacking a Google Interview](http://courses.csail.mit.edu/iap/interview/materials.php)
+        <p>This site has information about common questions and concepts often
+        used in technical programming interviews, along with some answers to
+        the questions.</p>
+    - [500 Data Structures and Algorithms practice problems and their solutions](https://techiedelight.quora.com/500-Data-Structures-and-Algorithms-practice-problems-and-their-solutions)
+        <p>This is a long list of common data structures and algorithm problems.</p>
+    - [Top 10 Algorithms and Data Structures for Competitive Programming](http://www.geeksforgeeks.org/top-algorithms-and-data-structures-for-competitive-programming/)
+        <p>This is another list of common data structures and algorithms.</p>
+    </div>
+    <div class="col-md-6" markdown="1">
+    ### Online Challenges
+    - [UVa Online Judge](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=118)
+        <p>This site is an online judge for programming challenges found in the book [Programming Challenges](https://link.springer.com/book/10.1007%2Fb97559).</p>
+    - [HackerRank](http://www.hackerrank.com/)
+        <p>This site is contains a variety of programming challenges similar to
+        what is found in ACM programming contests. It also includes
+        non-programming contest type problems as well and is a platform for
+        evaluating and testing your programming skills.</p>
+    - [LeetCode](https://leetcode.com/)
+        <p>This is another site that contains a variety of programming challenges.</p>
+    - [TopCoder](https://www.topcoder.com/challenges/)
+        <p>This is another site that contains a variety of programming challenges.
+        It also periodically runs contests and learning resources.</p>
+    - [Project Euler](https://projecteuler.net/)
+        <p>This site is a large set of mathematical and programming problems
+        designed to test your abilities and sharpen your skills. The problems
+        make for good practice.</p>
+    - [Google Code Jam](https://code.google.com/codejam/)
+        <p>This is global programming competition where programmers test their
+        skills by solving multiple rounds of algorithmic puzzles.</p>
+    - [Advent of Code](https://adventofcode.com/)
+        <p>This is an annual series of programming challenges.</p>
+    </div>
+    </div>
