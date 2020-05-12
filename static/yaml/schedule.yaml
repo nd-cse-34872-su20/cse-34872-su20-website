@@ -1,7 +1,7 @@
-- name:     Preparation
+- name:     Orientation
   days:
-      - date:           Wed 05/27
-        topics:         Preparation
+      - date:           Mon 05/25
+        topics:         Orientation
         assignments:
           - Reading 00
 
