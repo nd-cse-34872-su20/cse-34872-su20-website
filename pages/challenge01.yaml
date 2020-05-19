@@ -1,0 +1,233 @@
+title:      "Challenge 01: Rotate Matrix"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge01-rotate-matrix.png" class="pull-right" width="200px">
+
+    You just can't escape the [Matrix].  Even in your sleep, you still have
+    nightmares of visiting the `ORACLE` and banging your head against the wall
+    doing the assignments in [Systems Programming].  You are hopeful that the
+    instructor is even more **respectful** of your time outside of class, but
+    you have your doubts...
+
+    Fortunately, in this problem, you are dealing with a different type of **matrix**:
+
+    > Given an `n x n` 2D **matrix** representing an image, rotate the
+    **matrix** by `90` degrees (clockwise).
+
+    That is given in the **matrix** in the upper left, you are modify it
+    **in-place** such that you produce the **matrix** in the bottom right (that
+    is, perform a clock-wise rotation of the **matrix** without allocating a
+    new **matrix**).
+
+    [Matrix]: https://en.wikipedia.org/wiki/The_Matrix_(franchise)
+    [Systems Programming]: https://www3.nd.edu/~pbui/teaching/cse.20289.sp20/
+
+    ## Input
+
+    You will be given a series of **matrices** in the following format:
+
+        :::text
+        N
+        D_1_1 ... D_1_N
+        ...
+        D_N_1 ... D_N_N
+
+    That is, the first row has the number `N`, which represents the dimensions
+    of the proceeding **matrix**.  This is followed by `N x N` integers that
+    represent the data in the **matrix**.
+
+    Here is an example input:
+
+        ::text
+        3
+        1 2 3
+        4 5 6
+        7 8 9
+        4
+        5 1 9 11
+        2 4 8 10
+        13 3 6 7
+        15 14 12 16
+        0
+
+    <div class="alert alert-warning" markdown="1">
+    **Note**: The input is terminated by a final `0` for the `N` value.
+    </div>
+
+    ## Output
+
+    For each **matrix** in the input stream, you are to rotate the **matrix**
+    as described above and print out each matrix as show below.
+
+    Here is the output given the example input above:
+
+        ::text
+        7 4 1
+        8 5 2
+        9 6 3
+
+        15 13 2 5
+        14 3 4 1
+        12 6 8 9
+        16 7 10 11
+
+    <div class="alert alert-warning" markdown="1">
+
+    **Note**: There is a space between each element in a matrix and a blank
+    line between each matrix.  However, there is no trailing space after the
+    last element of each row, nor is there a trailing blank line after the last
+    matrix.
+
+    </div>
+
+    <div class="alert alert-info" markdown="1">
+    #### <i class="fa fa-code"></i> Leet Code
+
+    This programming challenge is based on [48. Rotate
+    Image](https://leetcode.com/problems/rotate-image/) from [LeetCode].
+
+    </div>
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitLab
+
+        $ git checkout -b challenge01               # Create and checkout challenge01 branch
+
+        $ $EDITOR challenge01/program.cpp           # Edit your code
+
+        $ git add challenge01/program.cpp           # Stage your changes
+        $ git commit -m "challenge01: done"         # Commit your changes
+
+        $ git push -u origin challenge01            # Send changes to GitLab
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-code"></i> Programming Languages
+
+    Note, [dredd] supports [C], [C++], [Python], [Java], [Go], [Node], [Ruby],
+    [Perl6], and [Guile].  You may use any of those languages, just be sure to
+    name your source file `program.$EXTENSION` where `$EXTENSION` is the
+    appropriate file extension for your chosen language (e.g. `py` for
+    [Python]).
+
+    If you wish to try out another language, please let the instructor know and
+    support can be added to [dredd].
+
+    </div>
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        # Check code by submitting to dredd using provided script
+        $ .scripts/submit.py
+        Submitting challenge01 assignment ...
+        Submitting challenge01 code ...
+          Result Success
+           Score 6.00
+            Time 0.11
+
+        # Check code by submitting to dredd using curl
+        $ curl -F source=@challenge01/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge01
+        {"result": "Success", "score": 6, "time": 0.11436676979064941}
+
+    The **score** returned from [dredd] will be one of the following:
+
+    <table class="table table-bordered table-striped">
+      <thead>
+        <th>Score</th>
+        <th>Description</th>
+        <th>Notes</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>6.0</td>
+          <td>Success</td>
+          <td>Program has successfully passed all test cases within the provided time limit.</td>
+        </tr>
+        <tr>
+          <td>5.0</td>
+          <td>Output Format Error</td>
+          <td>Output appears mostly correct, except the formatting is wrong (usually a whitespace or spelling error).</td>
+        </tr>
+        <tr>
+          <td>4.0</td>
+          <td>Time Limit Exceeded</td>
+          <td>Program did not terminate within the provided time limit (<b>10 seconds</b>).</td>
+        </tr>
+        <tr>
+          <td>3.0</td>
+          <td>Wrong Answer</td>
+          <td>Output does not match test cases.</td>
+        </tr>
+        <tr>
+          <td>2.0</td>
+          <td>Execution Error</td>
+          <td>Program did not terminate successfully (usually a segmentation fault or exception)</td>
+        </tr>
+        <tr>
+          <td>1.0</td>
+          <td>Compilation Error</td>
+          <td>Program failed to compile (usually a syntax error)</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="alert alert-danger" markdown="1">
+    #### <i class="fa fa-gavel"></i> Test Cases
+
+    Note, [dredd] contains additional test cases beyond that which is show in
+    the examples above.  This means that even if you pass on the input above,
+    you are not guaranteed to pass the [dredd] test if you do not handle
+    additional situations.
+
+    This means you should consider what the possible edge cases are and how to
+    handle them.  Feel free to create your own input and output test files and
+    use them to verify your program:
+
+        :::bash
+        # Manually test program
+        $ ./program < input.txt | diff -u - output.txt
+
+    To access a special debugging mode of the `submit.py` script, you can use
+    the following to get the output ofr [dredd].
+
+        :::bash
+        # Get debugging output from dredd
+        $ DEBUG=1 ../.scripts/submit.py
+
+    </div>
+
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+
+    [Reading 01]:       reading01.html
+    [dredd]:            https://dredd.h4x0r.space
+    [C]:                https://en.wikipedia.org/wiki/The_C_Programming_Language
+    [C++]:              https://isocpp.org
+    [Python]:           https://www.python.org
+    [Java]:             https://www.oracle.com/java/index.html
+    [Node]:             https://www.nodejs.org
+    [Ruby]:             https://www.ruby-lang.org
+    [Go]:               https://www.golang.org
+    [Perl6]:            https://perl6.org/
+    [Guile]:            https://www.gnu.org/software/guile/
+    [GitLab]:           https://gitlab.com
+    [curl]:             https://curl.haxx.se
