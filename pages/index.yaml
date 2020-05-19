@@ -59,7 +59,7 @@ body:       |
     </div>
 
     <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-4">
         <h3>Class Information</h3>
         <dl>
             <dt><i class="fa fa-clock-o"></i> Lecture</dt>
@@ -79,32 +79,51 @@ body:       |
         </dl>
     </div>
 
-    <div class="col-md-6">
-        <h3>Instructor</h3>
+    <div class="col-md-8">
+        <div class="row">
+            <div class="col-md-6">
+            <h3>Instructor</h3>
 
-        <dl>
-            <dt><i class="fa fa-user"></i> Instructor</dt>
-            <dd><a href="http://www3.nd.edu/~pbui/">Peter Bui</a> (<a href="mailto:pbui@nd.edu">pbui@nd.edu</a>)</dd>
+            <dl>
+                <dt><i class="fa fa-user"></i> Instructor</dt>
+                <dd><a href="http://www3.nd.edu/~pbui/">Peter Bui</a> (<a href="mailto:pbui@nd.edu">pbui@nd.edu</a>)</dd>
 
-            <dt><i class="fa fa-life-ring"></i> Virtual Office Hours</dt>
-            <dd><strong>T/TH</strong> 7:30 - 9:00 PM EST, and by <strong>appointment</strong></dd>
-        </dl>
+                <dt><i class="fa fa-life-ring"></i> Virtual Office Hours</dt>
+                <dd><strong>T/TH</strong> 7:30 - 9:00 PM EST, and by <strong>appointment</strong></dd>
+            </dl>
+            </div>
+            <div class="col-md-6">
+            <h3>Teaching Assistant</h3>
 
-        <div class="alert alert-info">
-              <h4><i class="fa fa-question"></i> Help Protocol</h4>
-              <ol class="list-inline">
-                  <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
-                  <li><small><i class="fa fa-arrow-right"></i></small></li>
-                  <li><strong><i class="fa fa-slack"></i> Slack</strong></li>
-                  <li><small><i class="fa fa-arrow-right"></i></small></li>
-                  <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
-                  <li><small><i class="fa fa-arrow-right"></i></small></li>
-                  <li><strong><i class="fa fa-envelope"></i> Email</strong></li>
-                  <li><small><i class="fa fa-arrow-right"></i></small></li>
-                  <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
-              </ol>
+            <dl>
+                <dt><i class="fa fa-user"></i> Teaching Assistant</dt>
+                <dd>Michael Eisemann (<a href="mailto:meiseman@nd.edu">meiseman@nd.edu</a>)</dd>
+
+                <dt><i class="fa fa-life-ring"></i> Virtual Office Hours</dt>
+                <dd><strong>TBD</strong></dd>
+            </dl>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+            <div class="alert alert-info">
+                  <h4><i class="fa fa-question"></i> Help Protocol</h4>
+                  <ol class="list-inline">
+                      <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
+                      <li><small><i class="fa fa-arrow-right"></i></small></li>
+                      <li><strong><i class="fa fa-slack"></i> Slack</strong></li>
+                      <li><small><i class="fa fa-arrow-right"></i></small></li>
+                      <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
+                      <li><small><i class="fa fa-arrow-right"></i></small></li>
+                      <li><strong><i class="fa fa-envelope"></i> Email</strong></li>
+                      <li><small><i class="fa fa-arrow-right"></i></small></li>
+                      <li><em><i class="fa fa-lightbulb-o"></i> Think</em></li>
+                  </ol>
+            </div>
+            </div>
         </div>
     </div>
+    
     </div>
 
     <div class="row">
