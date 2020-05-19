@@ -1,0 +1,179 @@
+title:      "Reading 00: Orientation"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Welcome to [CSE 34872 Programming Challenges], which (as the syllabus
+    states) is a "course that revolves around solving *brain-teaser* and
+    *puzzle-type* problems that often appear in programming contests, online
+    challenges, and job interviews".  What this means is that we will be
+    studying common data structures, algorithms, and programming techniques
+    that are useful in tackling a variety of problems.
+
+    <div class="alert alert-info" markdown="1">
+
+    #### <i class="fa fa-bookmark"></i> TL;DR
+
+    For this week, you familiarize yourself with using [Zoom] and [Slack] and
+    then setup your [GitHub] assignments repository.
+
+    </div>
+
+    ## Course Overview
+
+    Last semester, many of you took the **Data Structures** course where you
+    learned about the properties and characteristics of different data
+    structures (and perhaps you even implemented a few).  The focus of this
+    class, however, is not in the *construction* of these data structures, but
+    rather their *application*.  This means we will focus on *when* to use
+    these data structures and algorithms and *how* to utilize them effectively
+    rather than *what* they are.  In concrete terms, we will not be
+    implementing say a [hash table]; instead we will use one to solve a variety
+    of problems.
+
+    Following the [Hands-On Imperative], you will have the opportunity to put
+    the material we discuss in class into practice via a *respectful* number of
+    weekly **programming challenges** (**three a week**).  Along with these
+    challenges will be **reading assignments** to ensure you have a context or
+    background knowledge for what we will be discussing in class.  As with last
+    semester in [Systems Programming], the reading assignments will be
+    automatically graded.
+
+    In fact all of your assignments will be automatically graded by [dredd] via
+    the [continuous integration] system provided by [GitHub].  As you may be
+    realizing during your internship this summer, **testing** is an important
+    part of software engineering and we will therefore explore various aspects
+    of **software development** including debugging, profiling, testing, and
+    more throughout the course (*if there is time*).
+
+    Although each class will involve some amount of lecture, there will also be
+    a lot of in-class activities and hands-on learning.  Because of this,
+    **participation** is a component of your grade and you are expected to come
+    to class **regularly** and **on-time**.
+
+    Fortunately, however, there are **no exams** in this class.  Instead, we
+    will have a final **in-class programming contest** where you will get to
+    work in groups of `3` (similar to the [ACM Programming Contest]).
+    Likewise, you will also have to participate in **two external programming
+    contests** such as those provided by [HackerRank] or [LeetCode].
+
+    [Hands-On Imperative]:      https://en.wikipedia.org/wiki/Hacker_ethic#Hands-On_Imperative
+    [Continuous Integration]:   https://en.wikipedia.org/wiki/Continuous_integration
+    [ACM Programming Contest]:  https://icpc.baylor.edu/
+    [hash table]:               https://en.wikipedia.org/wiki/Hash_table
+    [Systems Programming]:      https://www3.nd.edu/~pbui/teaching/cse.20289.sp20/
+
+    ## Task 1: Zoom
+
+    For all of our class meetings, we will be using [Zoom] to video conference.
+    Before our first class meeting, make sure you can login to the [Zoom]
+    system and access our [meeting link]:
+
+    > [https://notredame.zoom.us/j/96051200559](https://notredame.zoom.us/j/96051200559)
+
+    ### Notes
+
+    - You will need to signup and create a [Zoom] account if you don't already
+      have one.  We recommend that you use the Notre Dame [Zoom] login system.
+
+    - You will need to download and install the [Zoom] client to perform video
+      conferencing.
+
+    - By default, you microphone will be **muted**.  To speak, you will need to
+      manually unmute it.
+
+    [meeting link]: https://notredame.zoom.us/j/96051200559
+
+    ## Task 2: Slack
+
+    For communication outside of our meeting time, we will be using [Slack],
+    specifically the `#cse-34872-su20` channel:
+
+    > [https://nd-cse.slack.com/messages/cse-34872-su20/](https://nd-cse.slack.com/messages/cse-34872-su20/)
+
+    There is a [class mailing list], but most day-to-day communication
+    (including office hours and homework help) should take place on [Slack].
+
+    [class mailing list]: su20-cse-34872-01-group@nd.edu
+
+    ### Notes
+
+    - You will need to signup and create a [Slack] account if you don't already
+      have one.
+
+    - You can use the web interface or download the [Slack] desktop client
+      (there are also mobile applications as well).
+
+    - Feel free to join any other channels that may interest you.
+
+    ## Task 3: GitHub
+
+    All of your work will be submitted to [GitHub] using [git]. Your final task
+    is to setup your [GitHub] repository by doing the following:
+
+    1. **Sign-in** or **create** a [GitHub] account if you do not already have one.
+
+        <div class="alert alert-warning" markdown="1">
+
+        **Note**: You probably used **GitLab** last semester.  We are now
+        switching to [GitHub], which is:
+
+        1. More **popular**.
+
+        2. **Faster** (responsive UI/UX).
+
+        3. Finally has free unlimited **private** repositories**.
+
+        4. Has fancy **classroom** features.
+
+        </div>
+
+    2. **Fork** the class assignments repository from the following template:
+
+        > [https://classroom.github.com/a/QBXKPQ08](https://classroom.github.com/a/QBXKPQ08)
+
+        This will create a **private** `cse-34872-su20-assignments-$USERNAME`
+        repository under your own account and linked to the [nd-cse-34872-su20]
+        organization.
+
+    3. Once this is done, you can [clone] your [git] repository to your local
+    machine (or the **student** machines:
+
+            :::bash
+            $ git clone https://github.com/nd-cse-34872-su20/cse-34872-su20-assignments-$USERNAME.git
+
+        Please update the `README.md` file to include your **name** and
+        **NetID** so it is straightforward to identify your account.
+
+        <div class="alert alert-success" markdown="1">
+        **Note**: If you have not done so already, you should consider setting
+        up [SSH Keys] on [GitHub] to enable password-less pushing and pulling.
+        </div>
+
+    [clone]:    https://git-scm.com/docs/git-clone
+    [git]:      https://git-scm.com/
+
+    <div class="alert alert-danger" markdown="1">
+    #### <i class="fa fa-github"></i> GitHub Repository
+
+    You are responsible for ensuring that your [GitHub] assignments repository
+    is in proper order, which means you have the correct settings and
+    permissions set.  Failure to properly configure your repository will
+    adversely impact your grade.
+
+    </div>
+
+    [CSE 34872 Programming Challenges]:     index.html
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [GitHub]:                               https://github.com
+    [dredd]:                                https://dredd.h4x0r.space
+    [Zoom]:                                 https://notredame.zoom.us/
+    [Slack]:                                https://nd-cse.slack.com/
+    [HackerRank]:                           https://www.hackerrank.com/
+    [LeetCode]:                             https://leetcode.com/
+    [SSH Keys]:                             https://help.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh
+    [nd-cse-34872-su20]:                    https://github.com/nd-cse-34872-su20
