@@ -1,0 +1,261 @@
+title:      "Reading 01: I/O, Sequence Containers"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Next week, we will provide a brief overview of the course and then dive
+    into reviewing performing basic I/O in [C], [C++], and [Python].  Next, we
+    will refresh our understanding of [algorithmic complexity] before
+    discussing sequence containers such as [arrays], [lists], [stacks], and
+    [queues].  While these are rather basic data structures, it is important to
+    understand their properties and behavior, which we will take advantage of
+    in [Challenge 01], [Challenge 02], and [Challenge 03].
+
+    We will also discuss **good coding style** and the use of [linters] to
+    analyze source code.
+
+    ## Reading
+
+    The readings for **Monday, June 1** are
+
+    1. [Competitive Programmer's Handbook]
+
+        - Chapter 1 Introduction
+
+        - Chapter 2 Time Complexity
+
+        - <p>Chapter 4 Data Structures</p>
+
+    2. [Interview Cake]
+
+        - [Array](https://www.interviewcake.com/concept/cpp/array)
+
+        - [Dynamic Array](https://www.interviewcake.com/concept/cpp/dynamic-array)
+
+        - [Linked List](https://www.interviewcake.com/concept/cpp/linked-list)
+
+        - [Stack](https://www.interviewcake.com/concept/cpp/stack)
+
+        - [Queue](https://www.interviewcake.com/concept/cpp/queue)
+
+    ### Optional
+
+    If you are interested in knowing a little more about [C++] `auto` loops,
+    then check out the following:
+
+    1. [Ranged-based for Statement (C++)](https://msdn.microsoft.com/en-us/library/jj203382.aspx)
+
+    2. [Iterators](https://msdn.microsoft.com/en-us/library/28f7db1d.aspx)
+
+    If you are interested in knowing how to utilize [lists] in [Python] as [stacks]
+    and [queues], the check out the following:
+
+    1. [Data Structures - More on Lists](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 01 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading01.json');
+    </script>
+
+    To submit your answers, you will need create a `answers.json` or
+    `answers.yaml` file in the `reading01` folder of your **assignments**
+    repository:
+
+    1. For this class, you must use a **separate [git] branch for each
+    assignment**.  This means that the work for each reading and challenge must
+    be done in a separate branch.  To create and checkout a new branch, you can
+    do the following:
+
+            :::bash
+            $ git checkout master         # Make sure we are in master branch
+            $ git pull --rebase           # Make sure we are up-to-date with github repository
+
+            $ git checkout -b reading01   # Create reading01 branch and check it out
+
+        Once you do the above, you should see the following output for the
+        [git-branch] command:
+
+            :::bash
+            $ git branch
+              master
+            * reading01
+
+        The `*` indicates that we are currently on the `reading01` branch.
+
+    2. You can either hand-write the `answers` file using your favorite text
+    editor or you can use the online form to generate the [JSON] data.
+
+        A hand-written `answers.yaml` may look like the following:
+
+            :::text
+            q1:     [python,perl,ruby]
+            q2:     [n2,nf,nlogn,1,n,sqrtn,logn]
+            q3:     n
+            q4:     n
+
+        The equivalent `answers.json` generated using the online form may look
+        like the following:
+
+            :::json
+            {
+              "q1": [
+                "python",
+                "perl",
+                "ruby"
+              ],
+              "q2": [
+                "n2",
+                "nf",
+                "nlogn",
+                "1",
+                "n",
+                "sqrtn",
+                "logn"
+              ],
+              "q3": "n",
+              "q4": "n"
+            }
+
+        You may use either format.  To determine which symbols correspond to
+        which response, take a look at the [Reading 01 Quiz] file.
+
+        To check your answers, you can use the provided `.scripts/submit.py`
+        script:
+
+            :::bash
+            $ cd reading01                        # Go into reading01 folder
+            $ $EDITOR answers.json                # Edit your answers.json file
+
+            $ ../.scripts/submit.py               # Submit reading01
+            Submitting reading01 assignment ...
+            Submitting reading01 quiz ...
+                  Q1 0.14
+                  Q2 0.14
+                  Q3 0.00
+                  Q4 0.00
+                  Q5 0.00
+                  Q6 0.00
+                  Q7 0.00
+                  Q8 0.00
+               Score 0.29
+
+        This script will submit your `reading01/answers.json` file to [dredd],
+        which is the automated grading system.  [dredd] will take your answers
+        and return to you a score as shown above.  Each reading is worth
+        **2.0** points.
+
+        **Note**: You may submit your quiz answers as many times as you want;
+        [dredd] does not keep track of who submits what or how many times.  It
+        simply returns a score.
+
+    3. Once you have your answers file, you need to add, commit the file, and
+    push your commits to [GitHub]:
+
+            :::bash
+            $ git add answers.json                # Add answers.json to staging area
+            $ git commit -m "Reading 00: Done"    # Commit work
+
+            $ git push -u origin reading01        # Push branch to GitHub
+
+        **Note**: You may edit and commit changes to your branch as many times
+        as you wish.  Just make sure all of your work goes in the appropriate
+        branch and then perform a `git push` when you are done.
+
+    4. When you are ready for your final submission, you need to create a
+    **pull request** via the [GitHub] interface:
+
+        - First, go to your repository's **Branches** page and then press the
+        **New pull request** button for the appropriate branch:
+
+            <div class="thumbnail">
+            <img src="static/img/github-branches.png" class="img-responsive"/>
+            </div>
+
+        - Next, edit the **pull request** title to "Reading 01", write a
+          comment if necessary and then press the "Create pull request" button.
+
+            <div class="thumbnail">
+            <img src="static/img/github-new-pull-request.png" class="img-responsive"/>
+            </div>
+
+        - Finally, assign the **pull request** to the **teaching assistant**
+          (ie. `AndroidKitKat`) and make sure all the checks have **passed**.
+
+            <div class="thumbnail">
+            <img src="static/img/github-pull-request.png" class="img-responsive"/>
+            </div>
+
+        - Every commit on [GitHub] will automatically submit your quiz or code to
+          [dredd] and the results of each run is displayed in the **Checks** tab
+          of each commit as shown below:
+
+            <div class="thumbnail">
+            <img src="static/img/github-check.png" class="img-responsive"/>
+            </div>
+
+    Once you have made the **pull request**, the instructor or teaching
+    assistant can verify your work and provide feedback via the discussion form
+    inside the **pull request**.  If necessary, you can update your submission
+    by simply committing and pushing to the appropriate branch; the **pull
+    request** will automatically be updated to match your latest work.
+
+    When all work is graded, the instructor will merge your branch and close
+    the **pull request**.
+
+    <div class="alert alert-danger" markdown="1">
+    **Note**: Please **do not merge** your own **pull request**.  This makes it
+    more difficult for the instructor to keep track of what needs to be graded.
+    </div>
+
+    <div class="alert alert-success" markdown="1">
+
+    #### <i class="fa fa-thumbs-up"></i> Qualitative Feedback
+
+    The purpose of this workflow is to provide you with better feedback.
+    Instead of simply determining if your work is correct, the instructor will
+    attempt to provide you with more **qualitative feedback** such as whether
+    or not you used good programming practices or if your code could be
+    improved or organized better.
+
+    The hope is that this will help you grow as programmers and develop some
+    **taste** :).
+
+    </div>
+
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [Interview Cake]:                       https://www.interviewcake.com/
+    [GitHub]:                               https://github.com
+    [git]:                                  https://git-scm.com
+    [Reading 01 Quiz]:                      static/json/reading01.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+
+    [C]:                                    https://en.wikipedia.org/wiki/C_(programming_language)
+    [C++]:                                  https://isocpp.org/
+    [Python]:                               https://www.python.org/
+    [algorithmic complexity]:               https://en.wikipedia.org/wiki/Analysis_of_algorithms
+    [sequence containers]:                  https://en.wikipedia.org/wiki/Sequence_container_(C%2B%2B)
+    [arrays]:                               https://en.wikipedia.org/wiki/Dynamic_array
+    [lists]:                                https://en.wikipedia.org/wiki/Linked_list
+    [stacks]:                               https://en.wikipedia.org/wiki/Stack_(abstract_data_type)
+    [queues]:                               https://en.wikipedia.org/wiki/Queue_(abstract_data_type)
+    [linters]:                              https://en.wikipedia.org/wiki/Lint_(software)
+
+
+    [Challenge 01]:                         challenge01.html
+    [Challenge 02]:                         challenge02.html
+    [Challenge 03]:                         challenge03.html
