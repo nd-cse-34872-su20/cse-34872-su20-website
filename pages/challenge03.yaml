@@ -1,0 +1,120 @@
+title:      "Challenge 03: HTML Tags"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png" class="pull-right" width="200px">
+
+    You really enjoyed writing the [HTML] for the [spidey] web server in
+    [Systems Programming].  It was fun writing in a [declarative language] that
+    just required you to format text using some [HTML] tags to describe what
+    the text meant and not worry about control flow or anything complex like
+    that.
+
+    Well, there was one problem... it was sometimes difficult to keep track of
+    all of the [HTML] tags and make sure that they were **balanced**.
+
+    For instance, the following is considered **balanced**:
+
+        :::html
+        The <i>quick</i> brown fox jumps over the <b>lazy</b> dog
+
+    That is, the *opening* of each tag (ie. `<i>` or `<b>`) is followed by the
+    closing of each tag (ie. `</i>` or `</b>`).
+
+    The following, however, is not **balanced**:
+
+        :::html
+        The <i><u>quick</i></u> brown fox jumps over the <b>lazy</b> dog
+
+    In this example, the `<u>` tag is followed by the `</i>` closing tag before
+    it encounters its corresponding `</u>` closing tag, and is thus considered
+    **unbalanced**.
+
+    Your job is to write a simple [HTML] **linter** that checks if tags are
+    properly **balanced**.
+
+    [Systems Programming]: https://www3.nd.edu/~pbui/teaching/cse.20289.sp20
+    [HTML]: https://developer.mozilla.org/en-US/docs/Web/HTML
+    [spidey]: https://www3.nd.edu/~pbui/teaching/cse.20289.sp20/project.html
+    [declarative language]: https://en.wikipedia.org/wiki/Declarative_programming
+
+    ## Input
+
+    The input consists of a series of lines that may or may not contain
+    multiple [HTML] tags.
+
+    Here is an example input:
+
+        ::text
+        A <tt>tag</tt>
+        A <tt>tag
+        A <b><tt>tag</tt></b>
+        A <b><tt>tag</b></tt>
+
+    <div class="alert alert-warning" markdown="1">
+
+    **Note**: You are only concerned with the tags and not with any of the
+    text.  Likewise, there are **no attributes** in these tags (eg. you may
+    assume the tags are in the form `<TAG>` and `</TAG>`.
+
+    </div>
+
+    ## Output
+
+    For each line of [HTML], you are to determine if the tags on that line is
+    balanced or not and report the result.
+
+    Here is the output for the example input above:
+
+        ::text
+        Balanced
+        Unbalanced
+        Balanced
+        Unbalanced
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitLab
+
+        $ git checkout -b challenge03               # Create and checkout challenge03 branch
+
+        $ $EDITOR challenge03/program.cpp           # Edit your code
+
+        $ git add challenge03/program.cpp           # Stage your changes
+        $ git commit -m "challenge03: done"         # Commit your changes
+
+        $ git push -u origin challenge03            # Send changes to GitLab
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge03 assignment ...
+        Submitting challenge03 code ...
+          Result Success
+           Score 6.00
+            Time 0.02
+
+        $ curl -F source=@challenge03/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge03
+        {"result": "Success", "score": 6, "time": 0.016292572021484375}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
