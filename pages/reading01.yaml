@@ -155,7 +155,7 @@ body:       |
         This script will submit your `reading01/answers.json` file to [dredd],
         which is the automated grading system.  [dredd] will take your answers
         and return to you a score as shown above.  Each reading is worth
-        **2.0** points.
+        **4.0** points.
 
         **Note**: You may submit your quiz answers as many times as you want;
         [dredd] does not keep track of who submits what or how many times.  It
