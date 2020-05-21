@@ -1,0 +1,122 @@
+title:      "Reading 02: Searching, Sorting, and Associative Containers"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [searching], [sorting], and
+    [associative containers] such as [sets], [maps], and [hash tables].
+    Knowing how to apply these techniques will come in handy for [Challenge
+    04], [Challenge 05], and [Challenge 06].
+
+    [Challenge 04]: challenge04.html
+    [Challenge 05]: challenge05.html
+    [Challenge 06]: challenge06.html
+
+    [searching]:    https://en.wikipedia.org/wiki/Search_algorithm
+    [sorting]:      https://en.wikipedia.org/wiki/Sorting_algorithm
+
+    [associative containers]:   https://en.wikipedia.org/wiki/Associative_containers
+    [sets]:         https://en.wikipedia.org/wiki/Set_(abstract_data_type)
+    [maps]:         https://en.wikipedia.org/wiki/Associative_array
+    [hash tables]:  https://en.wikipedia.org/wiki/Hash_table
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Reading
+
+    The readings for this week are:
+
+    1. [Competitive Programmer's Handbook]
+
+        - Chapter 3 Sorting
+
+        - <p>Chapter 4 Data Structures</p>
+
+            *Focus on sections 4.2 Set structures and 4.3 Map structures.*
+
+    ### Optional
+
+    Here are some optional resources:
+
+    1. [C++] standard library:
+
+        - [sort](https://en.cppreference.com/w/cpp/algorithm/sort)
+        - [set](http://en.cppreference.com/w/cpp/container/set)
+        - [map](http://en.cppreference.com/w/cpp/container/map)
+        - [unordered_set](http://en.cppreference.com/w/cpp/container/unordered_set)
+        - [unordered_map](http://en.cppreference.com/w/cpp/container/unordered_map)
+
+    2. [Python] standard library:
+
+        - [sorting](https://docs.python.org/3/howto/sorting.html)
+        - [set](https://docs.python.org/3/library/stdtypes.html#set-types-set-frozenset)
+        - [dict](https://docs.python.org/3/library/stdtypes.html#typesmapping)
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 02 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading02.json');
+    </script>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git checkout master                 # Make sure we are in master branch
+
+        $ git pull --rebase                   # Make sure we are up-to-date with GitHub
+
+        $ git checkout -b reading02           # Create reading02 branch and check it out
+
+        $ cd reading02                        # Go into reading02 folder
+
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/submit.py               # Check reading02 quiz
+        Submitting reading02 assignment ...
+        Submitting reading02 quiz ...
+             Q01 0.40
+             Q02 0.60
+             Q03 0.20
+             Q04 0.80
+             Q05 0.25
+             Q06 0.25
+             Q07 0.25
+             Q08 0.25
+             Q09 0.50
+             Q10 0.50
+           Score 4.00
+
+        $ git add answers.json                # Add answers.json to staging area
+
+        $ git commit -m "Reading 02: Done"    # Commit work
+
+        $ git push -u origin reading02        # Push branch to GitHub
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 01]:                           reading01.html
+    [Reading 02 Quiz]:                      static/json/reading02.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html

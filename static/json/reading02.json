@@ -1,0 +1,78 @@
+{
+    "q08": {
+        "type": "blank", 
+        "question": "\n<strong>\n\nComplete the <tt>has_duplicates</tt> Python function below, which returns\n<tt>True</tt> if the given list has any duplicates (otherwise\n<tt>False</tt>).\n\n</strong>\n\n<pre>\ndef has_duplicates(lst):\n    return ____\n</pre>\n"
+    }, 
+    "q09": {
+        "type": "multiple", 
+        "question": "\n<strong>\n\nWhich of the following statements are true regarding maps and sets in C++\n(select all that apply)?\n\n</strong>\n", 
+        "responses": {
+            "unordered_sets_search": "Unordered sets have O(logn) average search times.", 
+            "ordered_sets_search": "Ordered sets have O(logn) average search times.", 
+            "sets_order": "An ordered set and unordered set with the same elements may iterate through a different sequence of elements.", 
+            "unordered_maps_hash": "Unordered maps utilize a hash table.", 
+            "ordered_maps_hash": "Ordered maps utilize a hash table."
+        }
+    }, 
+    "q10": {
+        "type": "multiple", 
+        "question": "\n<strong>\n\nWhich of the following statements are true regarding maps and sets in\nPython (select all that apply)?\n\n</strong>\n", 
+        "responses": {
+            "sets_immutable": "Sets are immutable.", 
+            "dicts_key": "Dictionary keys can be any object including strings, ints, floats, and lists.", 
+            "sets_order": "Iterating over two sets with the same elements always yields the same order.", 
+            "sets_declaration": "A set can be declared with <tt>{item0, item1, ..., itemN}</tt>.", 
+            "dicts_declaration": "An empty dictionary can be delared with either <tt>dict()</tt> or <tt>{}</tt>."
+        }
+    }, 
+    "q02": {
+        "type": "blank", 
+        "question": "\n<strong>\n\nGiven the following vector in C++:\n\n</strong>\n\n<pre>\nvector&lt;int&gt; v = {4, 6, 6, 3, 7, 5, 4, 7, 0, 1};\n</pre>\n\n<strong>\nTo sort the vector in ascending order we would do:\n</strong>\n\n<pre>\n____(____, ____);\n</pre>\n\n<strong>\nTo sort the vector in descending order we would do:\n</strong>\n\n<pre>\n____(____, ____);\n</pre>\n"
+    }, 
+    "q03": {
+        "type": "blank", 
+        "question": "\n<strong>\n\nGiven the same vector in question 2, what would be the output of the\nfollowing statements after sorting the vector in ascending order:\n\n</strong>\n\n<pre>\ncout &lt;&lt; lower_bound(v.begin(), v.end(), 4) - v.begin() &lt;&lt; endl; // 1. ____\ncout &lt;&lt; upper_bound(v.begin(), v.end(), 6) - v.begin() &lt;&lt; endl; // 2. ____\n</pre>\n"
+    }, 
+    "q01": {
+        "type": "multiple", 
+        "question": "\n<strong>\n\nSuppose we wanted to sort a million integers where each integer is between\n0 and 1,000.  Which of the following statements are false?\n\n</strong>\n", 
+        "responses": {
+            "merge_bigo": "Merge sort would order the integers in O(nlogn) time in the worst case.", 
+            "quick_bigo": "Quick sort would order the integers in O(nlogn) time in the worst case.", 
+            "insert_bigo": "Insertion sort would order the integers in O(nlogn) time in the worst case.", 
+            "count_bigo": "Counting sort would order the integers in O(nlogn) time in the worst case.", 
+            "bubble_bigo": "Bubble sort would order the integers in O(nlogn) time in the worst case."
+        }
+    }, 
+    "q06": {
+        "type": "single", 
+        "question": "\n<strong>\n\nSuppose you wanted your music player to keep track of whether or not you\nhave played a Taylor Swift song before.  Which of the following would be\nthe most appropriate data structure to track this information?\n\n</strong>\n", 
+        "responses": {
+            "map": "Map", 
+            "vector": "Vector", 
+            "set": "Set"
+        }
+    }, 
+    "q07": {
+        "type": "single", 
+        "question": "\n<strong>\n\nSuppose you wanted your music player to keep of how many times you have\nplayed a Taylor Swift song.  Which of the following would be the most\nappropriate data structure to track this information?\n\n</strong>\n", 
+        "responses": {
+            "map": "Map", 
+            "vector": "Vector", 
+            "set": "Set"
+        }
+    }, 
+    "q04": {
+        "type": "blank", 
+        "question": "\n<strong>\nComplete the following implementation of binary search in C++:\n</strong>\n\n<pre>\ntemplate &lt;typename IT, typename T&gt;\nbool binary_search(IT start, IT end, const T &target) {\n    while (____) {                  // 1\n        auto length   = ____;       // 2\n        auto middle   = ____;       // 3\n        auto midpoint = *(____);    // 4\n\n        if (____) {                 // 5\n            end   = ____;           // 6\n        } else if (____) {          // 7\n            start = ____;           // 8\n        } else {\n            return true;\n        }\n    }\n    return false;\n}\n\n</pre>\n"
+    }, 
+    "q05": {
+        "type": "single", 
+        "question": "\n<strong>\n\nSuppose you wanted to build a music playlist so you can play all of your\nfavorite Taylor Swift songs in order.  Which of the following would be the\nmost appropriate data structure to store your playlist?\n\n</strong>\n", 
+        "responses": {
+            "map": "Map", 
+            "vector": "Vector", 
+            "set": "Set"
+        }
+    }
+}
