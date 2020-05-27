@@ -1,4 +1,3 @@
-NETFILE= 	/net/smb/pbui@fs.nd.edu/www/teaching/cse.34872.su20
 DEPLOY=		public
 COMMON= 	scripts/yasb.py templates/base.tmpl $(wildcard static/yaml/*.yaml)
 RSYNC_FLAGS= 	-rv --copy-links --progress --exclude="*.swp" --exclude="*.yaml" --size-only
@@ -10,10 +9,7 @@ HTML= 		${YAML:.yaml=.html}
 
 all:		${HTML}
 
-install:	all
-	mkdir -p ${NETFILE}/static
-	rsync ${RSYNC_FLAGS} pages/.	${NETFILE}/.
-	rsync ${RSYNC_FLAGS} static/	${NETFILE}/static/.
+install:	mirror
 
 deploy:	all
 	mkdir -p ${DEPLOY}/static
