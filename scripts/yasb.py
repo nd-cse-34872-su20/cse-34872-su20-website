@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# Copyright (c) 2015- Peter Bui <peter.j.bui@gmail.com>
+# Copyright (c) 2020 Peter Bui <pbui@bx612.space>
 
 # Permission to use, copy, modify, and/or distribute this software for any
 # purpose with or without fee is hereby granted, provided that the above
@@ -52,7 +52,7 @@ def render_page(page):
 {{% block body %}}
 {}
 {{% end %}}
-'''.format(markdown.markdown(page.body.encode('utf-8').decode('utf-8'), extensions=['extra', hilite]))
+'''.format(markdown.markdown(page.body, extensions=['extra', hilite]))
 
     template = tornado.template.Template(layout, loader=loader)
     settings = {
@@ -62,7 +62,7 @@ def render_page(page):
     }
     print(template.generate(**settings).decode())
 
-# Main Execution ---------------------------------------------------------------
+# Main Execution
 
 if __name__ == '__main__':
     for path in sys.argv[1:]:
