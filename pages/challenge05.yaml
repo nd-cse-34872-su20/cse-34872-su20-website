@@ -1,0 +1,111 @@
+title:      "Challenge 05: Ranking Cards"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge05-cards.png" class="pull-right" width="200px">
+
+    As a good and responsible parent, the instructor is teaching his children
+    how to play cards[^1].  Although they are pretty good at counting, the
+    children still struggle with determining which cards have the highest value
+    due to the fact that some cards have faces rather numbers and that you also
+    have to factor in suits for when the values are the same.
+
+    For this problem, you are to read in a series of cardholders and their
+    corresponding cards, and then display the cardholders in the order of
+    highest card value to lowest (first by `rank` and then by `suit`).
+
+    ## Input
+
+    You will be given a series of hands from standard input in the follow format:
+
+        ::text
+        N
+        Name1 Rank1 Suit1
+        ...
+        NameN RankN SuitN
+
+    - `N` indicates the number of cardholders.
+
+    - `Name` is the name of the cardholder.
+
+    - `Rank` is the rank of the card: `2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A`.
+
+    - `Suit` is the suit of the card: `C, D, H, S` (ie. clubs, diamonds, hearts, spades).
+
+    The input will be terminated by a `N` value of `0`.
+
+    Here is an example input:
+
+        ::text
+        4
+        Peter 10 D
+        Caleb 9 H
+        Abigail J H
+        Madeline J S
+        0
+
+    ## Output
+
+    You are to order the cardholders of each input set and display them such
+    that the person with the highest card value comes first, while the person with
+    the lowest card value comes last. Separate cardholders with ", ":
+
+        ::text
+        NameHighest, ..., NameLowest
+
+    You must use the ordering above as the rules of precedence for both `rank`
+    and `suit`. (**Note**: you should use the `suit` in the case of a tied `rank`.)
+
+    Here is the output for the example input above:
+
+        ::text
+        Madeline, Abigail, Peter, Caleb
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitLab
+
+        $ git checkout -b challenge05               # Create and checkout challenge05 branch
+
+        $ $EDITOR challenge05/program.cpp           # Edit your code
+
+        $ git add challenge05/program.cpp           # Stage your changes
+        $ git commit -m "challenge05: done"         # Commit your changes
+
+        $ git push -u origin challenge05            # Send changes to GitLab
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge05 assignment ...
+        Submitting challenge05 code ...
+          Result Success
+           Score 6.00
+            Time 0.16
+
+        $ curl -F source=@challenge05/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge05
+        {"result": "Success", "score": 6, "time": 0.16451787948608398}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
+
+    [^1]: At this rate, they'll need to figure out a way to pay for college.
