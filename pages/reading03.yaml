@@ -1,0 +1,106 @@
+title:      "Reading 03: Complete Search, Greedy Algorithms"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to the following problem
+    solving techniques:
+
+    1. **Complete Search**: This involves trying out every possibility and
+    testing them.  Although [brute-force] search may feel wrong, sometimes the
+    most straightforward solution is the best one.  To perform a "complete
+    search" we will need the ability to generate each combination and the
+    ability to perform [backtracking].  
+
+    2. **Greedy Algorithms**: This is a problem solving approach where we
+    attempt to find a global optimum by always making the locally optimal
+    choice. That is, [greedy algorithms] take advantae of certain problem
+    features to avoid searching every possibility in order to find an optimal
+    solution.
+
+    Both of these techniques will come in handy for solving [Challenge 07],
+    [Challenge 08], and [Challenge 09].
+
+    ## Reading
+
+    The readings for this week are:
+
+    1. [Competitive Programmer's Handbook]
+
+        - Chapter 5 Complete Search
+        - Chapter 6 Greedy Algorithm
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 03 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading03.json');
+    </script>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git checkout master                 # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with GitHub
+
+        $ git checkout -b reading03           # Create reading03 branch and check it out
+
+        $ cd reading03                        # Go into reading03 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/submit.py               # Check reading03 quiz
+        Submitting reading03 assignment ...
+        Submitting reading03 quiz ...
+              Q1 0.50
+              Q2 0.50
+              Q3 0.50
+              Q4 0.50
+              Q5 0.50
+              Q6 0.25
+              Q7 0.50
+              Q8 0.75
+           Score 4.00
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 04: Done"    # Commit work
+
+        $ git push -u origin reading03        # Push branch to GitHub
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 01]:                           reading01.html
+    [Reading 03 Quiz]:                      static/json/reading03.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    
+    [Challenge 07]: challenge07.html
+    [Challenge 08]: challenge08.html
+    [Challenge 09]: challenge08.html
+
+    [brute-force]:  https://en.wikipedia.org/wiki/Brute-force_search
+    [backtracking]: https://en.wikipedia.org/wiki/Backtracking
+    [Greedy Algorithms]:    https://en.wikipedia.org/wiki/Greedy_algorithm
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
