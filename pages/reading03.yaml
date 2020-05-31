@@ -1,4 +1,4 @@
-title:      "Reading 03: Complete Search, Greedy Algorithms"
+title:      "Reading 03: Complete Search, Bit Manipulation, Greedy Algorithms"
 icon:       fa-book
 navigation: []
 internal:
@@ -16,9 +16,13 @@ body:       |
     search" we will need the ability to generate each combination and the
     ability to perform [backtracking].  
 
-    2. **Greedy Algorithms**: This is a problem solving approach where we
+    2. **Bit Manipulation**:  This technique takes advantage of the bit
+    representation of an integer to compactly store information using bitwise
+    logical operations.
+
+    3. **Greedy Algorithms**: This is a problem solving approach where we
     attempt to find a global optimum by always making the locally optimal
-    choice. That is, [greedy algorithms] take advantae of certain problem
+    choice. That is, [greedy algorithms] take advantage of certain problem
     features to avoid searching every possibility in order to find an optimal
     solution.
 
@@ -33,6 +37,7 @@ body:       |
 
         - Chapter 5 Complete Search
         - Chapter 6 Greedy Algorithm
+        - Chapter 10 Bit manipulation
 
     ## Quiz
 

@@ -45,7 +45,7 @@
           - Challenge 05
           - Challenge 06
 
-- name:     Complete Search, Greedy Algorithms
+- name:     Complete Search, Bit Manipulation, Greedy Algorithms
   days:
       - date:           Mon 06/15
         topics:         Subsets, Permutations, Backtracking
@@ -53,7 +53,7 @@
           - Reading 03
 
       - date:           Wed 06/17
-        topics:         Optimization, Compression
+        topics:         Bit Manipulation, Optimization, Compression
         assignment:     Challenge 07
 
       - date:           Sat 06/19
@@ -62,15 +62,15 @@
           - Challenge 08
           - Challenge 09
 
-- name:     Bit Manipulation, Dynamic Programming
+- name:     Dynamic Programming
   days:
       - date:           Mon 06/22
-        topics:         Bitsets, Memoization
+        topics:         Memoization
         assignments:
           - Reading 04
 
       - date:           Wed 06/24
-        topics:         Table Building, Profiling
+        topics:         Table Building
 
       - date:           Sat 06/27
         assignments:
