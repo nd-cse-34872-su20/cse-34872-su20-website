@@ -1,0 +1,110 @@
+title:      "Challenge 09: Lego Bricks"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge09-lego.jpg" class="img-response pull-right">
+
+    The instructor's kids love playing with [LEGO].  Just give them a box of
+    these magical bricks and [everything is awesome][^1].
+
+    Lately, they have been working on organizing their gigantic collection of
+    bricks [^2].  As they were sorting their `1x1`, `2x1`, `3x1` and `4x1` bricks,
+    however, they got side-tracked with the following problem:
+
+    > Given a collection of `1x1`, `2x1`, and `3x1`, and `4x1` bricks, at least
+    > how many `4x1` rows are required to hold all the pieces?
+    >
+    > Note, the kids are very particular and only want the bricks in a horizontal
+    > orientation.
+
+    For example, given `3` `1x1` bricks, `2` `2x1` bricks, `2` `3x1` bricks,
+    and `3` `4x1` bricks, we would need `7` `4x1` rows as shown on the right.
+
+    Because they have a lot of bricks, the kids want "daddy's students" to help
+    them by writing a program that will compute the minimum number of rows
+    needed to arrange their `Nx1` bricks in `4x1` rows.
+
+    [LEGO]: https://www.lego.com/en-us
+    [everything is awesome]: https://youtu.be/StTqXEQ2l-Y
+    [^1]:   You're welcome.
+    [^2]:   By they, I really mean my wife.
+
+    ## Input
+
+    Each line of input will consist of four numbers corresponding to the number
+    of `1x1`, `2x1`, `3x1`, and `4x1` bricks.
+
+    You should read and process each line of input until the *end of the file*.
+
+    ### Example Input
+
+        :::text
+        3 2 2 3
+
+    ## Output
+
+    For each collection of bricks, you should output the minimum number of
+    `4x1` rows required to hold all the bricks as described above.
+
+    ### Example Output
+
+        :::text
+        7
+
+    <div class="alert alert-info" markdown="1">
+    #### <i class="fa fa-lightbulb-o"></i> Programming Challenges
+
+    This is based on the [311 -
+    Packets](https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&category=315&page=show_problem&problem=247)
+    problem on the [UVa Online Judge].
+
+    </div>
+
+    [UVa Online Judge]:                     https://uva.onlinejudge.org
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitLab
+
+        $ git checkout -b challenge09               # Create and checkout challenge09 branch
+
+        $ $EDITOR challenge09/program.cpp           # Edit your code
+
+        $ git add challenge09/program.cpp           # Stage your changes
+        $ git commit -m "challenge09: done"         # Commit your changes
+
+        $ git push -u origin challenge09            # Send changes to GitLab
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge09 assignment ...
+        Submitting challenge09 code ...
+          Result Success
+           Score 6.00
+            Time 0.02
+
+        $ curl -F source=@challenge09/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge09
+        {"result": "Success", "score": 6, "time": 0.016405344009399414}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
