@@ -1,0 +1,100 @@
+title:      "Reading 04: Dynamic Programming"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to the following problem
+    solving technique:
+
+    > [Dynamic Programming]: This is a problem solving technique that can be
+    viewed as a combination of [complete search] (correctness) and [greedy
+    algorithms] (efficiency).
+
+    This technique will come in handy for solving [Challenge 10], [Challenge
+    11], and [Challenge 12].
+
+    ## Reading
+
+    The readings for this week are:
+
+    1. [Competitive Programmer's Handbook]
+
+        - <p>Chapter 7 Dynamic Programming</p>
+
+    2. [A graphical introduction to dynamic programming](https://medium.com/future-vision/a-graphical-introduction-to-dynamic-programming-2e981fa7ca2?sk=37cd14642cf1a83eb0bb33d231442837)
+
+    ### Optional
+
+    - [Dynamic Programming for Brute-Forcers](https://hackernoon.com/dynamic-programming-for-brute-forcers-36f26c2466cf)
+
+    - [Demystifying Dynamic Programming](https://medium.freecodecamp.org/demystifying-dynamic-programming-3efafb8d4296)
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 04 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading04.json');
+    </script>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git checkout master                 # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git checkout -b reading04           # Create reading04 branch and check it out
+
+        $ cd reading04                        # Go into reading04 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/submit.py               # Check reading04 quiz
+        Submitting reading04 assignment ...
+        Submitting reading04 quiz ...
+              Q1 0.50
+              Q2 1.25
+              Q3 1.25
+              Q4 1.00
+           Score 4.00
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 04: Done"    # Commit work
+
+        $ git push -u origin reading04        # Push branch to github
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 01]:                           reading01.html
+    [Reading 03 Quiz]:                      static/json/reading03.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [C++]:                                  https://isocpp.org/
+    [Python]:                               https://www.python.org/
+    
+    [Challenge 10]: challenge10.html
+    [Challenge 11]: challenge11.html
+    [Challenge 12]: challenge12.html
+
+    [dynamic programming]:          https://en.wikipedia.org/wiki/Dynamic_programming
+    [complete search]:              https://en.wikipedia.org/wiki/Brute-force_search
+    [greedy algorithms]:            https://en.wikipedia.org/wiki/Greedy_algorithm
