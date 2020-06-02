@@ -181,7 +181,7 @@ body:       |
                     {% for item in day.get('items', []) %}
                     {% if item['name'].lower().startswith('contest') %}
                       {% set item['label'] = 'danger' %}
-                    {% elif item['name'].lower().startswith('video') %}
+                    {% elif item['name'].lower().startswith('zoom') %}
                       {% set item['label'] = 'success' %}
                     {% else %}
                       {% set item['label'] = 'default' %}

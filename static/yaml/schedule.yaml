@@ -16,6 +16,8 @@
             link:       https://docs.google.com/presentation/d/1tOAQgs6r5NNmFt-LbJD1YE_frtDei64GIHZh6Pk5jNs/edit?usp=sharing
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1N3bRyi46GVA-dC21u8tJtPO3-fPMEmshfjKCFvO2O2g/edit?usp=sharing
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/ydZHNOnPxkZLS6fG2GrkUZIzIJrvT6a80CkW_6UNzxwiisJHIyU6lEtcUv_6EOtz?startTime=1591053874000
 
       - date:           Wed 06/03
         topics:         Arrays, Lists, Stacks, Queues
