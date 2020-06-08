@@ -62,6 +62,9 @@
         topics:         Subsets, Permutations, Backtracking
         assignments:
           - Reading 03
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1EuY8EfHYxqOausPxb2c8vvOMQ8FRCk_fgrmQQBKWMTs/edit?usp=sharing
 
       - date:           Wed 06/17
         topics:         Bit Manipulation, Optimization, Compression
