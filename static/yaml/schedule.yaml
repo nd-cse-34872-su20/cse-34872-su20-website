@@ -43,6 +43,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1hQGjETPHqJAc807JWH2s-pF6bP5zb-i7AuIxr2b5Zm8/edit?usp=sharing
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/2NE2aOjT9FJJWJ3t6B-OSOk6LrbeX6a8hHJNrqdfz054Y88RfySQAD-3kQftYBdH?startTime=1591658852000
 
       - date:           Wed 06/10
         topics:         Sets, Maps
