@@ -71,6 +71,11 @@
       - date:           Wed 06/17
         topics:         Bit Manipulation, Optimization, Compression
         assignment:     Challenge 07
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1RgIc1--uMo6JsdQ9VTjd0GzlB8_1bpu3iEczVQ-w07U/edit?usp=sharing
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1p-u5tKjPOQd_hxzHgdFFPn4NmMm781hRpi_4kvH79rc/edit?usp=sharing
 
       - date:           Sat 06/19
         assignments:
