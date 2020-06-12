@@ -1,0 +1,112 @@
+title:      "Challenge 10: Counting"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge10-twins.jpg" class="img-responsive img-rounded pull-right" style="margin-left: 10px">
+
+    Abigail and Madeline are now in year two of elementary school and have been
+    developing their mathematical knowledge.  They are pretty good at counting,
+    but still struggle with writing numbers [^1].  They know the digits `1`,
+    `2`, `3`, and `4` pretty well.  Unfortunately, they sometimes don't realize
+    `4` is different from `1`, so they think that `4` is just another way to
+    write `1`.[^2]
+
+    To practice their number writing, Abigail and Madeline play a little game
+    where they makes numbers with the four digits they know and sums the values.
+    For example:
+
+        :::text
+        132     = 1 + 3 + 2 = 6
+        112314  = 1 + 1 + 2 + 3 + 1 + 1 = 9     # Remember that 4 = 1
+
+    Abigail and Madeline now want to know how many such numbers can they create
+    whose sum is a number `n`. For `n = 2`, they can make `5` numbers:
+
+        :::text
+        11, 14, 41, 44, 2
+
+    For `n > 2`, they are having trouble forming the numbers, so Abigail and
+    Madeline need your help.
+
+    [^1]:   Like father, like daughters.
+    [^2]:   Not true, but I needed a story.
+
+    ## Input
+
+    The input will consist of an arbitrary number of integers `n` such that `1 <=
+    n <= 1000`.
+
+    ### Example Input
+
+        :::text
+        2
+        3
+
+    ## Output
+
+    For each integer read, output an single integer stating how many numbers
+    Abigail and Madeline can make such that the sum of the digits is equal to
+    `n`.
+
+    ### Example Output
+
+        :::text
+        5
+        13
+
+    <div class="alert alert-info" markdown="1">
+    #### <i class="fa fa-lightbulb-o"></i> Programming Challanges
+    This is based on [10198 - Counting] problem on the [UVa Online
+    Judge].
+
+    </div>
+
+    [10198 - Counting]: https://uva.onlinejudge.org/index.php?option=onlinejudge&page=show_problem&problem=1139
+    [UVa Online Judge]: https://uva.onlinejudge.org/
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitLab
+
+        $ git checkout -b challenge10               # Create and checkout challenge10 branch
+
+        $ $EDITOR challenge10/program.cpp           # Edit your code
+
+        $ git add challenge10/program.cpp           # Stage your changes
+        $ git commit -m "challenge10: done"         # Commit your changes
+
+        $ git push -u origin challenge10            # Send changes to GitLab
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge10 assignment ...
+        Submitting challenge10 code ...
+          Result Success
+           Score 6.00
+            Time 0.02
+
+        $ curl -F source=@challenge10/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge10
+        {"result": "Success", "score": 6, "time": 0.016405344009399414}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
