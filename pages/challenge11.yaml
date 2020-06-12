@@ -1,0 +1,102 @@
+title:      "Challenge 11: Least Perfect Squares"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge11-lego.jpg" class="img-responsive img-rounded pull-right" style="margin-left: 10px">
+
+    Caleb, being two grades ahead of his sisters, is a bit more advanced in
+    his mathematical explorations and is currently tackling multiplication and
+    division.  He recently discovered squared numbers and was wondering the
+    following:
+
+    > Given a positive integer `n`, what is the least number of perfect square
+    numbers (for example, 1, 4, 9, 16, ...) which sum to `n`.
+
+
+    For example, for the number `12`, he knows he can use three `4`s (which is
+    a perfect square) to add up to `12`.
+
+    Likewise, for the number `13`, he has determined that he can use `4` and
+    `9` to sum up to `13`.
+
+    Caleb would like for you to write a program than determines what is the
+    least number of perfect squares required to sum up to any arbitrary
+    positive integer `n`.
+
+    ## Input
+
+    Each line of input will be a positive integer `n`.  You are to find the
+    least number of perfect square numbers that sum up to `n`.
+
+    ### Example Input
+
+        :::text
+        12
+        13
+
+    ## Output
+
+    For each input number `n`, print out the least number of perfect square
+    numbers that sum up to `n`.
+
+    ### Example Output
+
+        :::text
+        3
+        2
+
+    <div class="alert alert-info" markdown="1">
+    #### <i class="fa fa-lightbulb-o"></i> Programming Challanges
+    This is based on [279. Perfect Squares] problem on the [Leetcode].
+
+    </div>
+
+    [279. Perfect Squares]: https://leetcode.com/problems/perfect-squares/
+    [Leetcode]: https://leetcode.com
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitLab
+
+        $ git checkout -b challenge11               # Create and checkout challenge11 branch
+
+        $ $EDITOR challenge11/program.cpp           # Edit your code
+
+        $ git add challenge11/program.cpp           # Stage your changes
+        $ git commit -m "challenge11: done"         # Commit your changes
+
+        $ git push -u origin challenge11            # Send changes to GitLab
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge11 assignment ...
+        Submitting challenge11 code ...
+          Result Success
+           Score 6.00
+            Time 2.32
+
+        $ curl -F source=@challenge11/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge11
+        {"result": "Success", "score": 6, "time": 2.368675708770752}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
