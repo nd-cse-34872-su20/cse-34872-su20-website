@@ -1,0 +1,102 @@
+title:      "Reading 05: Trees"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [trees] and in particular
+    [binary trees], [heaps], and [binary search trees].  Understanding how to
+    represent, manipulate, and operating on these data structures will be
+    necessary to solve [Challenge 13], [Challenge 14], and [Challenge 15].
+
+    [Challenge 13]: challenge13.html
+    [Challenge 14]: challenge14.html
+    [Challenge 15]: challenge15.html
+
+    [trees]:                https://en.wikipedia.org/wiki/Binary_tree
+    [binary trees]:         https://en.wikipedia.org/wiki/Binary_tree
+    [heaps]:                https://en.wikipedia.org/wiki/Heap_(data_structure)
+    [binary search trees]:  https://en.wikipedia.org/wiki/Binary_search_tree
+
+    ## Reading
+
+    The readings for this week are:
+
+    1. [Competitive Programmer's Handbook]
+
+        - <p>Chapter 14 - Tree Algorithms</p>
+        - <p>Chapter 18 - Tree Queries</p>
+
+    2. [Open Data Structures](http://opendatastructures.org/ods-cpp/)
+
+        - <p>[6. Binary Trees](http://opendatastructures.org/ods-cpp/6_Binary_Trees.html)</p>
+        - <p>[10. Heaps](http://opendatastructures.org/ods-cpp/10_Heaps.html)
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 05 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading05.json');
+    </script>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git checkout master                 # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git checkout -b reading05           # Create reading05 branch and check it out
+
+        $ cd reading05                        # Go into reading05 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/submit.py               # Check reading05 quiz
+        Submitting reading05 assignment ...
+        Submitting reading05 quiz ...
+              Q1 1.40
+              Q2 0.80
+              Q3 0.60
+              Q4 0.60
+              Q5 0.60
+           Score 4.00
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 05: Done"    # Commit work
+
+        $ git push -u origin reading05        # Push branch to github
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 01]:                           reading01.html
+    [Reading 05 Quiz]:                      static/json/reading05.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [C++]:                                  https://isocpp.org/
+    [Python]:                               https://www.python.org/
+    
+    [Challenge 13]: challenge13.html
+    [Challenge 14]: challenge14.html
+    [Challenge 15]: challenge15.html
