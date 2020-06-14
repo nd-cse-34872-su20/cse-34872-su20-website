@@ -72,11 +72,10 @@ body:       |
               Q1 0.50
               Q2 0.50
               Q3 0.50
-              Q4 0.50
+              Q4 1.00
               Q5 0.50
-              Q6 0.25
+              Q6 0.50
               Q7 0.50
-              Q8 0.75
            Score 4.00
 
         $ git add answers.json                # Add answers.json to staging area
