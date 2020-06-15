@@ -1,0 +1,70 @@
+{
+    "q02": {
+        "type": "order", 
+        "question": "<strong>\n\nMatch the graph terms below to the following definitions:\n\n</strong>\n\n<ol>\n  <li>There exists a path between any two nodes in a graph.</li>\n  <li>When edges can only be traversed in one direction.</li>\n  <li>When each edge has a corresponding cost.</li>\n  <li>When every node has the same degree.</li>\n  <li>When every node has a degree <i>n - 1</i>.</li>\n</ol>\n", 
+        "responses": {
+            "directed": "Directed", 
+            "weighted": "Weighted", 
+            "connected": "Connected", 
+            "complete": "Complete", 
+            "regular": "Regular"
+        }
+    }, 
+    "q03": {
+        "type": "multiple", 
+        "question": "<strong>\n\nGiven the following graph representations:\n\n</strong>\n\n<pre>\nGraph 1 (Adjacency Matrix)        Graph 2 (Adjacency List)\n0 1 0 1                           A: B D\n0 0 0 1                           B: A C D\n0 1 0 0                           C: B D\n0 0 1 0                           D: A B C\n</pre>\n\n<strong>\n\nWhich of the following statements are true (choose all that apply)?\n\n</strong>\n", 
+        "responses": {
+            "graph1directed": "Graph 1 is directed.", 
+            "graph2connected": "Graph 2 is connected.", 
+            "graph2acyclic": "Graph 2 is acyclic.", 
+            "graph2directed": "Graph 2 is directed.", 
+            "graph1connected": "Graph 1 is connected.", 
+            "graph1acyclic": "Graph 1 is acyclic."
+        }
+    }, 
+    "q01": {
+        "type": "order", 
+        "question": "\n<strong>\n\nMatch the path terms below to the following definitions:\n\n</strong>\n\n<ol>\n  <li>Number of edges in a path.</li>\n  <li>When the first and last node in a path is the same.</li>\n  <li>When each node appears at most once in a path.</li>\n</ol>\n", 
+        "responses": {
+            "simple": "Simple", 
+            "length": "Length", 
+            "cycle": "Cycle"
+        }
+    }, 
+    "q06": {
+        "type": "multiple", 
+        "question": "\n<strong>\n\nWhich of the following statements regarding spanning trees is true (choose\nall that apply)?\n\n</strong>\n", 
+        "responses": {
+            "unique": "There is usually only one unique minimum spanning tree in a graph.", 
+            "maximum": "A maximum spanning tree is a spanning tree that has the most amount of edges as possible.", 
+            "greedy": "We can use greedy algorithms to construct minimum spanning trees.", 
+            "priority": "To implement Prim's algorithm, we can use a priority queue.", 
+            "single": "There is usually only one way to form a spanning tree.", 
+            "minimum": "A minimum spanning tree is a spanning tree that has the least amount of weight as possible.", 
+            "spanning": "In a spanning tree, there is path between any two nodes in the graph.", 
+            "acyclic": "Spanning trees are both connected and acyclic."
+        }
+    }, 
+    "q04": {
+        "type": "multiple", 
+        "question": "<strong>\n\nGiven Graph 1 (assume you have nodes labeled A, B, C, D) in Question 3,\nwhich of the following are valid traversal orders starting from A (choose\nall that apply)?\n\n</strong>\n", 
+        "responses": {
+            "dfs2": "DFS: A, C, B, D", 
+            "dfs1": "DFS: A, B, D, C", 
+            "bfs1": "BFS: A, D, B, C", 
+            "bfs2": "BFS: A, C, B, D"
+        }
+    }, 
+    "q05": {
+        "type": "multiple", 
+        "question": "<strong>\n\nWhich of the following statements are true regarding Dijkstra's algorithm\nfor finding shortest paths (choose all that apply)?\n</strong>\n", 
+        "responses": {
+            "priority": "The algorithm can be implemented with a priority queue.", 
+            "shortest": "The algorithm only computes the shortest path from one node to another specific node.", 
+            "efficient": "The algorithm is efficient and can proccess large graphs.", 
+            "dynamic": "The algorithm is an example of dynamic programming.", 
+            "negative": "The algorithm requires that there are no negative edge weights.", 
+            "greedy": "The algorithm is an example of a greedy algorithm."
+        }
+    }
+}

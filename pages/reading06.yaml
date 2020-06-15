@@ -1,0 +1,92 @@
+title:      "Reading 06: Graphs (Traversals, Shortest Paths, MSTs)"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on problems related to [graphs] and will focus on
+    representing them, traversing them, computing the shortest path in a graph,
+    and forming a minimum spanning tree.  Understanding these concepts will be
+    necessary to solve [Challenge 16], [Challenge 17], and [Challenge 18].
+
+    [Challenge 16]: challenge16.html
+    [Challenge 17]: challenge17.html
+    [Challenge 18]: challenge18.html
+    [graphs]:       https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+
+    ## Reading
+
+    The readings for this week are:
+
+    1. [Competitive Programmer's Handbook]
+
+        - <p>11. Basics of graphs</p>
+        - <p>12. Graph traversal</p>
+        - <p>13. Shortest paths</p>
+        - <p>15. Spanning Trees</p>
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 06 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading06.json');
+    </script>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git checkout master                 # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git checkout -b reading06           # Create reading06 branch and check it out
+
+        $ cd reading06                        # Go into reading06 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/submit.py               # Check reading06 quiz
+        Submitting reading06 assignment ...
+        Submitting reading06 quiz ...
+             Q01 0.50
+             Q02 0.75
+             Q03 0.50
+             Q04 0.50
+             Q05 1.00
+             Q06 0.75
+           Score 4.00
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 06: Done"    # Commit work
+
+        $ git push -u origin reading06        # Push branch to github
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 01]:                           reading01.html
+    [Reading 06 Quiz]:                      static/json/reading06.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [C++]:                                  https://isocpp.org/
+    [Python]:                               https://www.python.org/
