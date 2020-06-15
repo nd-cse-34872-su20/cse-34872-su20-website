@@ -1,0 +1,149 @@
+title:      "Challenge 16: The Longest Road"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge16-catan.jpg" class="img-responsive pull-right" style="padding-left: 10px">
+
+    In trying to be a good dad[^1], the instructor has started playing board
+    games with his kids. Besides classics like [Candy Land], they have been
+    playing newer games such as [Catan Junior] in hopes of graduating to more
+    sophisticated games such as [Settlers of Catan].
+
+    In [Settlers of Catan], players attempt to dominate an island by building
+    roads, settlements, and cities across the whole board[^2].  One way to
+    score two points in this game is to build the longest road[^3].
+    Unfortunately, for young players determining the longest road can be
+    difficult since the road network can be quite complex as shown below.
+
+    Your job is to help Abigail, Madeline, and Caleb (the instructor's
+    children) by writing a program that determines the longest road on the game
+    board.  To simplify the problem, we will just consider computing the
+    longest road for a single player:
+
+    - You are given a set of nodes (cities)
+
+    - You are given a set of edges (road segments) of length 1 connecting the nodes
+
+    - The longest road is defined as the longest path within the network that
+      doesn't use an edge twice.  Nodes may be visited more than once, however.
+
+    For example:
+
+        :::text
+        o      o--o      o
+         \    /    \    /
+          o--o      o--o
+         /    \    /    \
+        o      o--o      o--o
+                   \    /
+                    o--o
+
+    In the network above, the longest road is length `12`.
+
+    <div class="alert alert-info" markdown="1">
+    #### <i class="fa fa-lightbulb-o"></i> Programming Challanges
+    This is based on [539 - Settlers of Catan] problem on the [UVa Online Judge].
+    </div>
+
+    [539 - Settlers of Catan]: https://uva.onlinejudge.org/index.php?option=com_onlinejudge&Itemid=8&page=show_problem&problem=480
+    [UVa Online Judge]: https://uva.onlinejudge.org/
+    [Candy Land]: https://en.wikipedia.org/wiki/Candy_Land
+    [Catan Junior]: https://www.catan.com/game/catan-junior
+    [Settlers of Catan]: https://www.catan.com/game/catan-junior
+
+    [^1]: Work-life balance yo.
+    [^2]: And abusing the trade policies, and putting the robber on your land (jerks).
+    [^3]: A dangerous race... never works out for me.
+
+    ## Input
+
+    The input will contain multiple test cases.  The first line of each test case
+    contains two integers: the number of nodes `n` (`2 <= n <= 25`) and the number
+    of edges `m` (`1 <= m <= 25`).  The next `m` lines describe the *undirected*
+    edges, where each edge is given by the numbers of the two nodes connected by
+    it.  The nodes are labeled from `0` to `n - 1` and have degress of three or
+    less.  The network itself is not necessarily *connected*.
+
+    The input will be terminated by two values of `0` for `n` and `m`.
+
+    ### Example Input
+
+        :::text
+        3 2
+        0 1
+        1 2
+        15 16
+        0 2
+        1 2
+        2 3
+        3 4
+        3 5
+        4 6
+        5 7
+        6 8
+        7 8
+        7 9
+        8 10
+        9 11
+        10 12
+        11 12
+        10 13
+        12 14
+        0 0
+
+    ## Output
+
+    For each test case, output the length of the longest road.
+
+    ### Example Output
+
+        :::text
+        2
+        12
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitLab
+
+        $ git checkout -b challenge16               # Create and checkout challenge16 branch
+
+        $ $EDITOR challenge16/program.cpp           # Edit your code
+
+        $ git add challenge16/program.cpp           # Stage your changes
+        $ git commit -m "challenge16: done"         # Commit your changes
+
+        $ git push -u origin challenge16            # Send changes to GitLab
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge16 assignment ...
+        Submitting challenge16 code ...
+          Result Success
+           Score 6.00
+            Time 0.02
+
+        $ curl -F source=@challenge16/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge16
+        {"result": "Success", "score": 6, "time": 0.01632380485534668}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
