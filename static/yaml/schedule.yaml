@@ -71,7 +71,7 @@
             link:       https://docs.google.com/presentation/d/1EuY8EfHYxqOausPxb2c8vvOMQ8FRCk_fgrmQQBKWMTs/edit?usp=sharing
 
       - date:           Wed 06/17
-        topics:         Bit Manipulation, Optimization, Compression
+        topics:         Bit Manipulation, Greedy Algorithms
         assignment:     Challenge 07
         items:
           - name:       Slides
