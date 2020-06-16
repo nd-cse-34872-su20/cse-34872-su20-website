@@ -69,6 +69,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1EuY8EfHYxqOausPxb2c8vvOMQ8FRCk_fgrmQQBKWMTs/edit?usp=sharing
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/yZNXCpDrq31OfM_xtW3ORukdPcPLeaa81XJK-KEEyU-mWUbm_o4BQGhmk6pxneJO?startTime=1592263331000
 
       - date:           Wed 06/17
         topics:         Bit Manipulation, Greedy Algorithms
