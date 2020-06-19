@@ -1,0 +1,105 @@
+title:      "Challenge 18: Sim City"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge18-simcity.png" class="img-responsive pull-right" style="padding-left: 5px">
+
+    Recalling your youth, you remember spending long hours playing [Sim City]
+    [^1].  In this game you had the privilege and honor of building a city to
+    your exact specifications and desires.  You could build airports, sports
+    stadiums, schools, industrial factories, residential homes, and more.  It
+    was your job to keep the citizens of your metropolis happy and prosperous.
+
+    Unfortunately, to pay for all of these construction projects, you had to
+    tax your people.  Even in the virtual world, people hate taxes and want you
+    to spend their hard-earned income wisely. In particular, they would demand
+    that you build roads to connect every building, but in the most cost
+    efficient way.
+
+    Now that you have had some training in graph algorithms, you can easily
+    tackle the problem of connecting every building in your city to every other
+    building using the minimum amount of road.  Given the coordinates of the
+    buildings in a city, you are to connect them such that all buildings are
+    reachable by road, while minimizing the amount of pavement you must lay
+    down to make the connections.
+
+    [Sim City]: http://www.simcity.com/
+    [^1]:   I was actually more of a fan of [Sim Ant](https://en.wikipedia.org/wiki/SimAnt)
+
+    ## Input
+
+    The input is a series of building locations specified by sets of point
+    locations. The first line of a set denotes the number of points `N`, followed by
+    `N` pair of points `X Y`. The end of the input is denoted when `N` = 0. N will never
+    be larger than `100`.
+
+    ### Example Input
+
+        :::text
+        3
+        1.0 1.0
+        2.0 2.0
+        2.0 4.0
+        0
+    
+    <div class="alert alert-warning" markdown="1">
+    **Note**: You can assume you can connect buildings directly with a
+    straight-line path (unlike in the video game).
+    </div>
+
+    ## Output
+
+    For each set of building locations, output the minimum total amount of road
+    that must be constructed to connect all the buildings to **two decimal places**.
+
+    ### Example Output
+
+        :::text
+        3.41
+
+    ## Submission
+    
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git checkout -b challenge18               # Create and checkout challenge18 branch
+
+        $ $EDITOR challenge18/program.cpp           # Edit your code
+
+        $ git add challenge18/program.cpp           # Stage your changes
+        $ git commit -m "challenge18: done"         # Commit your changes
+
+        $ git push -u origin challenge18            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge18 assignment ...
+        Submitting challenge18 code ...
+          Result Success
+           Score 6.00
+            Time 0.02
+
+        $ curl -F source=@challenge18/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge18
+        {"result": "Success", "score": 6, "time": 0.01631760597229004}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
