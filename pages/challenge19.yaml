@@ -1,0 +1,102 @@
+title:      "Challenge 19: Passcode Cracking"
+icon:       fa-code
+navigation: []
+internal:
+external:
+body:       |
+
+    <img src="static/img/challenge19-doorlock.jpg" class="img-responsive pull-right" style="padding-left: 10px;">
+
+    Like most high security research facilities, many of the rooms in the
+    Fitzpatrick require a secret number code to enter.  Usually, a single
+    passcode is given to all the users of a particular room.  Unfortunately, in
+    this day and age of camera phones and drones, it is easy for intruders to
+    snoop on people entering in the passcode [^1].
+
+    In an effort to thwart passcode snoopers, the building security team has
+    implemented a new passcode mechanism: instead of entering the whole passcode,
+    the user must enter in three random numbers from the original door code. For
+    instance, if the passcode was `2468135`, the user may be asked to enter in the
+    `2nd`, `4th`, and `5th` numbers: `481`.  This shorter sequence (`2nd`, `4th`,
+    `5th`) changes each time, so just watching the someone enter in the door code
+    will not guarantee entry to the snooper.  Moreover, it helps prevent divulging
+    the complete passcode.
+
+    Being the [black hat] that you are, however, you decide that this security
+    arrangement is weak and plan on cracking the code to the instructor's
+    office [^2]. To do so, you have carefully monitored a series of successful
+    entries and recorded them in a text file. Knowing that the three random
+    numbers are always asked for in order and that the digits in the passcode
+    are unique (due to limitations to the security software), your next step is
+    to analyze these entries and produce the original passcode.
+
+    [black hat]:    https://en.wikipedia.org/wiki/Black_hat
+    [^1]:           Or people just text it to everyone or write it on the whiteboard.
+    [^2]:           Because like my door is never open and stuff.
+
+    ## Input
+
+    You will be given a series of successful entries where each entry is a
+    three digit sequence:
+
+    ### Example Input
+
+        :::text
+        352
+        154
+        542
+        315
+        152
+
+    ## Output
+
+    The passcode for the above input is:
+
+    ### Example Output
+
+        :::text
+        31542
+
+    ## Submission
+
+    To submit your work, follow the same procedure you used for [Reading 01]:
+
+        :::bash
+        $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
+        $ git checkout master                       # Make sure we are on master
+        $ git pull --rebase                         # Pull any changes from GitHub
+
+        $ git checkout -b challenge19               # Create and checkout challenge19 branch
+
+        $ $EDITOR challenge19/program.cpp           # Edit your code
+
+        $ git add challenge19/program.cpp           # Stage your changes
+        $ git commit -m "challenge19: done"         # Commit your changes
+
+        $ git push -u origin challenge19            # Send changes to GitHub
+
+    To check your code, you can use the `.scripts/submit.py` script or [curl]:
+
+        :::bash
+        $ .scripts/submit.py
+        Submitting challenge19 assignment ...
+        Submitting challenge19 code ...
+          Result Success
+           Score 6.00
+            Time 0.02
+
+        $ curl -F source=@challenge19/program.cpp https://dredd.h4x0r.space/code/cse-34872-su20/challenge19
+        {"result": "Success", "score": 6, "time": 0.016019344329833984}
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:           https://github.com
+    [HackerRank]:       https://www.hackerrank.com
+    [LeetCode]:         https://leetcode.com
+    [Reading 01]:       reading01.html
+    [curl]:             https://curl.haxx.se/
