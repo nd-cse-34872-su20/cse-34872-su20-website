@@ -1,0 +1,63 @@
+{
+    "q08": {
+        "type": "blank", 
+        "question": "<strong>\n<p>\nGiven the following graph:\n</p>\n\n<center>\n  <img src=\"static/img/reading07-flow.png\">\n</center>\n\n<ol>\n  <li>What is the maximum flow from 1 to 5? ____</li>\n  <li>What is the minimum cut from 1 to 5? ____</li>\n  <li>How many edges are in the minimum cut? ____</li>\n</ol>\n</strong>\n"
+    }, 
+    "q02": {
+        "type": "multiple", 
+        "question": "\n<strong>\n\nGiven the following graph, which of the following orders are topological\nsorts (select all that apply)?\n\n<center>\n<img src=\"static/img/reading07-tsort.png\">\n</center>\n\n</strong>\n", 
+        "responses": {
+            "seven": "A, D, H, F, G, E, B, C", 
+            "six": "C, B, E, A, D, H, F, G", 
+            "three": "A, B, C, E, D, H, G, F", 
+            "two": "C, A, B, E, D, F, G, H", 
+            "four": "B, A, D, C, H, E, G, F", 
+            "five": "A, B, D, F, C, E, G, H", 
+            "eight": "B, A, D, F, C, G, H, E", 
+            "one": "A, B, C, D, E, F, G, H"
+        }
+    }, 
+    "q03": {
+        "type": "blank", 
+        "question": "\n<strong>\n\nA path that goes through each edge exactly once is called an ____ path,\nwhile a path that visits each node exactly once is a ____ path.  A variant\nof either type of path that starts and ends at the same node is called a\n____.\n\nWhile there are efficient methods of determining if the former exists in a\ngraph, the existence of the latter is considered a ____ problem, where no\nefficient algorithm is known for solving the problem.\n\n</strong>\n"
+    }, 
+    "q01": {
+        "type": "blank", 
+        "question": "\n<strong>\n\nA ____ is an ordering of nodes in a ____ graph such that if there is a path\nfrom a node a to node b, then node a appears ____ b in the ordering.  An\n____ graph always has at least one such ordering.  According to Wikipedia,\nwe can use ____'s algorithm compute this ordering of nodes in a graph.\n\n</strong>\n"
+    }, 
+    "q06": {
+        "type": "multiple", 
+        "question": "<strong>\n<p>\nGiven the following graph, which of the following statements is true (choose all that apply)?\n</p>\n\n<center>\n  <img src=\"static/img/reading07-euler.png\">\n</center>\n</strong>\n", 
+        "responses": {
+            "hpath": "There is an Hamiltonian path.", 
+            "hcircuit": "There is an Hamiltonian circuit.", 
+            "ecircuit": "There is an Eulerian circuit.", 
+            "epath": "There is an Eulerian path."
+        }
+    }, 
+    "q07": {
+        "type": "blank", 
+        "question": "<strong>\n\nIn a ____ problem, we are interested in determining how much flow is\npossible to send from the ____ to the ____, while in a ____ problem, we\nwant to know the ____ set of edges that separates the two nodes of the\ngraph.\n\n</strong>\n"
+    }, 
+    "q04": {
+        "type": "multiple", 
+        "question": "\n<strong>\n\nFor an Eulerian path to exist in a graph, which of the following conditions\nare sufficient (choose all that apply)?\n\n</strong>\n", 
+        "responses": {
+            "even": "The degree of each node is even.", 
+            "odd": "The degree of each node is odd.", 
+            "odd_even": "The degree of exactly two nodes is odd, and the degree of all other nodes is even.", 
+            "even_odd": "The degree of exactly two nodes is even, and the degree of all other nodes is odd."
+        }
+    }, 
+    "q05": {
+        "type": "multiple", 
+        "question": "\n<strong>\n\nFor a Hamiltonian path to exist in a graph, which of the following\nconditions are sufficient (choose all that apply)?\n\n</strong>\n", 
+        "responses": {
+            "even": "The degree of each node is even.", 
+            "sum": "The sum of the degrees of each non-adjacent pair of nodes is at least n.", 
+            "connected": "The graph is connected.", 
+            "complete": "The graph is complete.", 
+            "degree": "The degree of each node is at least n/2."
+        }
+    }
+}

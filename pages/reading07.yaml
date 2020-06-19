@@ -1,0 +1,96 @@
+title:      "Reading 07: Graphs (Sorting, Paths, Flows)"
+icon:       fa-book
+navigation: []
+internal:
+external:
+body:       |
+
+    **Everyone**:
+
+    Next week, we will work on more problems related to [graphs] and will focus
+    on [topological sort], [hamiltonian paths], and [min-flow/max-cut]
+    problems.  Understanding these concepts will be necessary to solve
+    [Challenge 19], [Challenge 20], and [Challenge 21].
+
+    [Challenge 19]: challenge19.html
+    [Challenge 20]: challenge20.html
+    [Challenge 21]: challenge21.html
+    [graphs]:       https://en.wikipedia.org/wiki/Graph_(abstract_data_type)
+    [topological sort]: https://en.wikipedia.org/wiki/Topological_sorting
+    [hamiltonian paths]: https://en.wikipedia.org/wiki/Hamiltonian_path
+    [min-flow/max-cut]: https://en.wikipedia.org/wiki/Max-flow_min-cut_theorem
+
+    ## Reading
+
+    The readings for this week are:
+
+    1. [Competitive Programmer's Handbook]
+
+        - <p>16 Directed Graphs</p>
+        - <p>19 Paths and circuits</p>
+        - <p>20 Flows and cuts</p>
+
+    [C++]:      https://isocpp.org/
+    [Python]:   https://www.python.org/
+
+    ## Quiz
+
+    Once you have done the readings, answer the following [Reading 07 Quiz]
+    questions:
+
+    <div id="quiz-questions"></div>
+
+    <div id="quiz-responses"></div>
+
+    <script src="static/js/dredd-quiz.js"></script>
+    <script>
+    loadQuiz('static/json/reading07.json');
+    </script>
+
+    ## Submission
+
+    To submit you work, follow the same process outlined in [Reading 01]:
+
+        :::bash
+        $ git checkout master                 # Make sure we are in master branch
+        $ git pull --rebase                   # Make sure we are up-to-date with github
+
+        $ git checkout -b reading07           # Create reading07 branch and check it out
+
+        $ cd reading07                        # Go into reading07 folder
+        $ $EDITOR answers.json                # Edit your answers.json file
+
+        $ ../.scripts/submit.py               # Check reading07 quiz
+        Submitting reading07 assignment ...
+        Submitting reading07 quiz ...
+             Q01 0.75
+             Q02 0.75
+             Q03 0.60
+             Q04 0.20
+             Q05 0.30
+             Q06 0.20
+             Q07 0.75
+             Q08 0.45
+           Score 4.00
+
+        $ git add answers.json                # Add answers.json to staging area
+        $ git commit -m "Reading 07: Done"    # Commit work
+
+        $ git push -u origin reading07        # Push branch to github
+
+    <div class="alert alert-success" markdown="1">
+    #### <i class="fa fa-github"></i> Pull Request
+
+    Once you have commited your work and pushed it to [GitHub], remember to
+    create a **pull request** and assign it to the **teaching assistant**.
+    </div>
+
+    [GitHub]:                               https://github.com
+    [Reading 01]:                           reading01.html
+    [Reading 07 Quiz]:                      static/json/reading07.json
+    [JSON]:                                 http://www.json.org/
+    [git-branch]:                           https://git-scm.com/docs/git-branch
+    [dredd]:                                https://dredd.h4x0r.space
+    [Competitive Programmer's Handbook]:    https://cses.fi/book.html
+    [C++]:                                  https://isocpp.org/
+    [Python]:                               https://www.python.org/
