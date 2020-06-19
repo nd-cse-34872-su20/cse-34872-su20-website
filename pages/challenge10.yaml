@@ -74,7 +74,7 @@ body:       |
         :::bash
         $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
         $ git checkout master                       # Make sure we are on master
-        $ git pull --rebase                         # Pull any changes from GitLab
+        $ git pull --rebase                         # Pull any changes from GitHub
 
         $ git checkout -b challenge10               # Create and checkout challenge10 branch
 
@@ -83,7 +83,7 @@ body:       |
         $ git add challenge10/program.cpp           # Stage your changes
         $ git commit -m "challenge10: done"         # Commit your changes
 
-        $ git push -u origin challenge10            # Send changes to GitLab
+        $ git push -u origin challenge10            # Send changes to GitHub
 
     To check your code, you can use the `.scripts/submit.py` script or [curl]:
 

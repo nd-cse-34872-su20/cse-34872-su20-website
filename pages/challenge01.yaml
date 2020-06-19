@@ -99,7 +99,7 @@ body:       |
         :::bash
         $ cd path/to/cse-34872-su20-assignments     # Go to assignments repository
         $ git checkout master                       # Make sure we are on master
-        $ git pull --rebase                         # Pull any changes from GitLab
+        $ git pull --rebase                         # Pull any changes from GitHub
 
         $ git checkout -b challenge01               # Create and checkout challenge01 branch
 
@@ -108,7 +108,7 @@ body:       |
         $ git add challenge01/program.cpp           # Stage your changes
         $ git commit -m "challenge01: done"         # Commit your changes
 
-        $ git push -u origin challenge01            # Send changes to GitLab
+        $ git push -u origin challenge01            # Send changes to GitHub
 
     <div class="alert alert-success" markdown="1">
     #### <i class="fa fa-code"></i> Programming Languages
@@ -229,5 +229,5 @@ body:       |
     [Go]:               https://www.golang.org
     [Perl6]:            https://perl6.org/
     [Guile]:            https://www.gnu.org/software/guile/
-    [GitLab]:           https://gitlab.com
+    [GitHub]:           https://gitlab.com
     [curl]:             https://curl.haxx.se
