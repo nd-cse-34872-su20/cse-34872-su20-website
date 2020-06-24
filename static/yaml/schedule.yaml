@@ -97,7 +97,7 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1ZcxYauZ5Ib67sWU-mw0lAUfmPxBELT-NKV6rvSc725U/edit?usp=sharing
-          - name:       Slides
+          - name:       Zoom
             link:       https://notredame.zoom.us/rec/share/9c1aI7TU9VlJfqOTx0bBc6ofErrOaaa8hHRM-_cPyEpUPOJj2q5YjMG839vguxvd?startTime=1592868390000
 
       - date:           Wed 06/24
@@ -153,6 +153,9 @@
         topics:         Topological Sorting
         assignments:
           - Reading 07
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/1nne0O1jfjVkvKJczYOWO8YwOUcLG78f4FiiM5UNsA1I/edit?usp=sharing
 
       - date:           Wed 07/15
         topics:         Paths, Flows and Cuts
