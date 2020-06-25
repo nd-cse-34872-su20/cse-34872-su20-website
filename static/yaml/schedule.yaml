@@ -102,6 +102,9 @@
 
       - date:           Wed 06/24
         topics:         Table Building
+        items:
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/49RXLqnv1m9Ia9aXt0X6XJEYT7m1X6a81CEW_fUKzk2sweyqSB3lvh80yEptSaYt?startTime=1593040710000
 
       - date:           Sat 06/27
         assignments:
