@@ -168,6 +168,9 @@
           - Challenge 19
           - Challenge 20
           - Challenge 21
+        items:
+          - name:       Slides
+            link:       https://docs.google.com/presentation/d/15EmTmiD2NB6vdxyjv92lvW15odfyJxA-p7qzyA2ERQo/edit?usp=sharing
 
 - name:     In-Class Contest
   days:
