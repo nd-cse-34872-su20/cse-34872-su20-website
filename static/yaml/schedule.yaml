@@ -121,6 +121,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1pagsQuwymvZTADg3juD0oRpOfAuADAHyWEQA6TdwpNY/edit?usp=sharing
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/2dZaI4z732pJE7PL9UCBVIMLF4vZX6a813IX86UNmBmRqRwDQmfmIJO9CS64v7hA?startTime=1593472877000
 
       - date:           Wed 07/01
         topics:         Divide and Conquer
