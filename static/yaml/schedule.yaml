@@ -126,6 +126,9 @@
 
       - date:           Wed 07/01
         topics:         Divide and Conquer
+        items:
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/xdJpPrT09WdLeK-SsR7ge4lwP7S7eaa8gyJMrPBfmR5OmCq8V1zpdjSq_S9VbpiR?startTime=1593645758000
 
       - date:           07/04
         assignments:
