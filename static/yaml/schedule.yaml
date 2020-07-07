@@ -145,6 +145,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1mnH8JHQca4wvtvbIlVCi7TRk1P06Ubf52x5P670YAyM/edit?usp=sharing
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/7-pIM6HfykxLe6P_yW_5frAtWb7Keaa813Af_vYOzxn3rhobW_6m5OXaM2pVM9V7?startTime=1594078015000
 
       - date:           Wed 07/08
         topics:         Shortest Paths, Spanning Trees
