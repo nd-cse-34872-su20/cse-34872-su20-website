@@ -150,6 +150,9 @@
 
       - date:           Wed 07/08
         topics:         Shortest Paths, Spanning Trees
+        items:
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/4-9fNIHT3UhOeJX01WCDRKgnHa24T6a8hncb8_YJnh5-Llkdo14hBLrjJHVUMgKj?startTime=1594250590000
 
       - date:           07/11
         assignments:
