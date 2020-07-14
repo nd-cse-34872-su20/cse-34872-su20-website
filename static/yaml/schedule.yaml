@@ -169,6 +169,8 @@
         items:
           - name:       Slides
             link:       https://docs.google.com/presentation/d/1nne0O1jfjVkvKJczYOWO8YwOUcLG78f4FiiM5UNsA1I/edit?usp=sharing
+          - name:       Zoom
+            link:       https://notredame.zoom.us/rec/share/w8p_D77g6WFLTa_ntFnkXqR-RpvIaaa81SUf-PsJyUt2axExqxprGH8zo_Ac2Qij?startTime=1594682806000
 
       - date:           Wed 07/15
         topics:         Paths, Flows and Cuts
